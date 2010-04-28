@@ -1,0 +1,920 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ARVS	utils.h	/^const string ARVS[3] = {"D4T", "3TC", "NVP"}; \/\/ TODO: other ARVs used for model?$/;"	v
+BIRTH_DATA	inputs.h	/^#define BIRTH_DATA /;"	d
+BIRTH_PROBABILITY	utils.h	/^#define BIRTH_PROBABILITY(/;"	d
+BRandom	rand/mersenne.cpp	/^uint32_t CRandomMersenne::BRandom() {$/;"	f	class:CRandomMersenne	signature:()
+BRandom	rand/randomc.h	/^   uint32_t BRandom();                 \/\/ Output random bits$/;"	p	class:CRandomMersenne	access:public	signature:()
+BRandom	rand/randomc.h	/^   uint32_t BRandom();                 \/\/ Output random bits$/;"	p	class:CRandomMother	access:public	signature:()
+BernouilliH	rand/stocc.h	/^   int BernouilliH(int32_t x, double h, double rh, StochasticLib1 *sto); \/\/ used by rejection method$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t x, double h, double rh, StochasticLib1 *sto)
+Bernoulli	rand/stoc1.cpp	/^int StochasticLib1::Bernoulli(double p) {$/;"	f	class:StochasticLib1	signature:(double p)
+Bernoulli	rand/stocc.h	/^   int Bernoulli(double p);            \/\/ Bernoulli distribution$/;"	p	class:StochasticLib1	access:public	signature:(double p)
+Bino_c_pm	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Bino_dl	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+Bino_dr	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+Bino_f1	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+Bino_f2	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+Bino_f4	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+Bino_f5	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+Bino_k1	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+Bino_k2	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+Bino_k4	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+Bino_k5	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+Bino_l_pq	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Bino_ll	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Bino_lr	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Bino_p1	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+Bino_p2	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+Bino_p3	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+Bino_p4	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+Bino_p5	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+Bino_p6	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+Bino_r1	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+Bino_r2	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+Bino_r4	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+Bino_r5	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+Binomial	rand/stoc1.cpp	/^int32_t StochasticLib1::Binomial (int32_t n, double p) {$/;"	f	class:StochasticLib1	signature:(int32_t n, double p)
+Binomial	rand/stocc.h	/^   int32_t Binomial (int32_t n, double p);                 \/\/ Binomial distribution$/;"	p	class:StochasticLib2	access:public	signature:(int32_t n, double p)
+Binomial	rand/stocc.h	/^   int32_t Binomial (int32_t n, double p); \/\/ Binomial distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t n, double p)
+BinomialF	rand/stocc.h	/^   double BinomialF(int32_t k, int32_t n, double l_pq, double c_pm); \/\/ used by BinomialPatchwork$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t k, int32_t n, double l_pq, double c_pm)
+BinomialInver	rand/stoc1.cpp	/^int32_t StochasticLib1::BinomialInver (int32_t n, double p) {$/;"	f	class:StochasticLib1	signature:(int32_t n, double p)
+BinomialInver	rand/stocc.h	/^   int32_t BinomialInver (int32_t n, double p);            \/\/ binomial by inversion$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, double p)
+BinomialModeSearch	rand/stocc.h	/^   int32_t BinomialModeSearch(int32_t n, double p);        \/\/ binomial by search from mode$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t n, double p)
+BinomialPatchwork	rand/stocc.h	/^   int32_t BinomialPatchwork(int32_t n, double p);         \/\/ binomial by patchwork rejection$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t n, double p)
+BinomialRatioOfUniforms	rand/stoc1.cpp	/^int32_t StochasticLib1::BinomialRatioOfUniforms (int32_t n, double p) {$/;"	f	class:StochasticLib1	signature:(int32_t n, double p)
+BinomialRatioOfUniforms	rand/stocc.h	/^   int32_t BinomialRatioOfUniforms (int32_t n, double p);  \/\/ binomial by ratio of uniforms$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, double p)
+CC	Makefile	/^CC = g++$/;"	m
+CD4_INIT	utils.h	/^#define CD4_INIT /;"	d
+CD4_MAX	utils.h	/^#define CD4_MAX /;"	d
+CFLAGS	Makefile	/^CFLAGS = -Wall -g -O0 $/;"	m
+CFishersNCHypergeometric	rand/stocc.h	/^   CFishersNCHypergeometric(int32_t n, int32_t m, int32_t N, double odds, double accuracy = 1E-8); \/\/ constructor$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds, double accuracy = 1E-8)
+CFishersNCHypergeometric	rand/stocc.h	/^class CFishersNCHypergeometric {$/;"	c
+CFishersNCHypergeometric::CFishersNCHypergeometric	rand/stocc.h	/^   CFishersNCHypergeometric(int32_t n, int32_t m, int32_t N, double odds, double accuracy = 1E-8); \/\/ constructor$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds, double accuracy = 1E-8)
+CFishersNCHypergeometric::MakeTable	rand/stocc.h	/^   double MakeTable(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.); \/\/ make table of probabilities$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.)
+CFishersNCHypergeometric::N	rand/stocc.h	/^   int32_t n, m, N;                                        \/\/ Parameters$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::ParametersChanged	rand/stocc.h	/^   int ParametersChanged;$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ accuracy$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::lng	rand/stocc.h	/^   double lng(int32_t x);                                  \/\/ natural log of proportional function$/;"	p	class:CFishersNCHypergeometric	access:protected	signature:(int32_t x)
+CFishersNCHypergeometric::logodds	rand/stocc.h	/^   double logodds;                                         \/\/ ln odds ratio$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::m	rand/stocc.h	/^   int32_t n, m, N;                                        \/\/ Parameters$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::mFac	rand/stocc.h	/^   double mFac, xFac;                                      \/\/ log factorials$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::mean	rand/stocc.h	/^   double mean(void);                                      \/\/ calculate approximate mean$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(void)
+CFishersNCHypergeometric::mode	rand/stocc.h	/^   int32_t mode(void);                                     \/\/ calculate mode (exact)$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(void)
+CFishersNCHypergeometric::moments	rand/stocc.h	/^   double moments(double * mean, double * var);            \/\/ calculate exact mean and variance$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(double * mean, double * var)
+CFishersNCHypergeometric::n	rand/stocc.h	/^   int32_t n, m, N;                                        \/\/ Parameters$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::odds	rand/stocc.h	/^   double odds;                                            \/\/ odds ratio$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::probability	rand/stocc.h	/^   double probability(int32_t x);                          \/\/ calculate probability function$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(int32_t x)
+CFishersNCHypergeometric::probabilityRatio	rand/stocc.h	/^   double probabilityRatio(int32_t x, int32_t x0);         \/\/ calculate probability f(x)\/f(x0)$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(int32_t x, int32_t x0)
+CFishersNCHypergeometric::rsum	rand/stocc.h	/^   double rsum;                                            \/\/ reciprocal sum of proportional function$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::scale	rand/stocc.h	/^   double scale;                                           \/\/ scale to apply to lng function$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::variance	rand/stocc.h	/^   double variance(void);                                  \/\/ approximate variance$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(void)
+CFishersNCHypergeometric::xFac	rand/stocc.h	/^   double mFac, xFac;                                      \/\/ log factorials$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::xLast	rand/stocc.h	/^   int32_t xLast;$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::xmax	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ minimum and maximum of x$/;"	m	class:CFishersNCHypergeometric	access:protected
+CFishersNCHypergeometric::xmin	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ minimum and maximum of x$/;"	m	class:CFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric	rand/stocc.h	/^   CMultiFishersNCHypergeometric(int32_t n, int32_t * m, double * odds, int colors, double accuracy = 1E-9); \/\/ constructor$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors, double accuracy = 1E-9)
+CMultiFishersNCHypergeometric	rand/stocc.h	/^class CMultiFishersNCHypergeometric {$/;"	c
+CMultiFishersNCHypergeometric::CMultiFishersNCHypergeometric	rand/stocc.h	/^   CMultiFishersNCHypergeometric(int32_t n, int32_t * m, double * odds, int colors, double accuracy = 1E-9); \/\/ constructor$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors, double accuracy = 1E-9)
+CMultiFishersNCHypergeometric::N	rand/stocc.h	/^   int32_t n, N;                                           \/\/ copy of parameters$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::SumOfAll	rand/stocc.h	/^   void SumOfAll(void);                                    \/\/ calculates sum of proportional function for all x combinations$/;"	p	class:CMultiFishersNCHypergeometric	access:protected	signature:(void)
+CMultiFishersNCHypergeometric::accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ accuracy of calculation$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::colors	rand/stocc.h	/^   int colors;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::lng	rand/stocc.h	/^   double lng(int32_t * x);                                \/\/ natural log of proportional function$/;"	p	class:CMultiFishersNCHypergeometric	access:protected	signature:(int32_t * x)
+CMultiFishersNCHypergeometric::logodds	rand/stocc.h	/^   double logodds[MAXCOLORS];                              \/\/ log odds$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::loop	rand/stocc.h	/^   double loop(int32_t n, int c);                          \/\/ recursive loops used by SumOfAll$/;"	p	class:CMultiFishersNCHypergeometric	access:protected	signature:(int32_t n, int c)
+CMultiFishersNCHypergeometric::m	rand/stocc.h	/^   int32_t * m;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::mFac	rand/stocc.h	/^   double mFac;                                            \/\/ sum of log m[i]!$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::mean	rand/stocc.h	/^   void mean(double * mu);                                 \/\/ calculate approximate mean$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(double * mu)
+CMultiFishersNCHypergeometric::moments	rand/stocc.h	/^   double moments(double * mean, double * stddev, int32_t * combinations = 0); \/\/ calculate exact mean and variance$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(double * mean, double * stddev, int32_t * combinations = 0)
+CMultiFishersNCHypergeometric::n	rand/stocc.h	/^   int32_t n, N;                                           \/\/ copy of parameters$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::odds	rand/stocc.h	/^   double * odds;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::probability	rand/stocc.h	/^   double probability(int32_t * x);                        \/\/ calculate probability function$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(int32_t * x)
+CMultiFishersNCHypergeometric::remaining	rand/stocc.h	/^   int32_t remaining[MAXCOLORS];                           \/\/ number of balls of color > c in urn$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::rsum	rand/stocc.h	/^   double rsum;                                            \/\/ reciprocal sum of proportional function$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::scale	rand/stocc.h	/^   double scale;                                           \/\/ scale to apply to lng function$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::sn	rand/stocc.h	/^   int32_t sn;                                             \/\/ number of possible combinations of x$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::sx	rand/stocc.h	/^   double sx[MAXCOLORS];                                   \/\/ sum of x*f(x) or mean$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::sxx	rand/stocc.h	/^   double sxx[MAXCOLORS];                                  \/\/ sum of x^2*f(x) or variance$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::variance	rand/stocc.h	/^   void variance(double * var);                            \/\/ calculate approximate variance$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(double * var)
+CMultiFishersNCHypergeometric::xi	rand/stocc.h	/^   int32_t xi[MAXCOLORS];                                  \/\/ x vector to calculate probability of$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiFishersNCHypergeometric::xm	rand/stocc.h	/^   int32_t xm[MAXCOLORS];                                  \/\/ rounded approximate mean of x[i]$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric	rand/stocc.h	/^   CMultiWalleniusNCHypergeometric(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8); \/\/ constructor$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8)
+CMultiWalleniusNCHypergeometric	rand/stocc.h	/^class CMultiWalleniusNCHypergeometric {$/;"	c
+CMultiWalleniusNCHypergeometric::CMultiWalleniusNCHypergeometric	rand/stocc.h	/^   CMultiWalleniusNCHypergeometric(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8); \/\/ constructor$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8)
+CMultiWalleniusNCHypergeometric::Dummy_align	rand/stocc.h	/^   int Dummy_align;                                        \/\/ filler$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::E	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::N	rand/stocc.h	/^   int32_t N;                                              \/\/ total items in urn$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::SetParameters	rand/stocc.h	/^   void SetParameters(int32_t n, int32_t * m, double * odds, int colors); \/\/ change parameters$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors)
+CMultiWalleniusNCHypergeometric::accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ desired accuracy$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::bico	rand/stocc.h	/^   double bico;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::binoexpand	rand/stocc.h	/^   double binoexpand(void);                                \/\/ binomial expansion of integrand$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+CMultiWalleniusNCHypergeometric::colors	rand/stocc.h	/^   int colors;                                             \/\/ number of different colors$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::findpars	rand/stocc.h	/^   void findpars(void);                                    \/\/ calculate r, w, E$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+CMultiWalleniusNCHypergeometric::integrate	rand/stocc.h	/^   double integrate(void);                                 \/\/ numerical integration$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+CMultiWalleniusNCHypergeometric::integrate_step	rand/stocc.h	/^   double integrate_step(double a, double b);              \/\/ used by integrate()$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(double a, double b)
+CMultiWalleniusNCHypergeometric::laplace	rand/stocc.h	/^   double laplace(void);                                   \/\/ Laplace's method with narrow integration interval$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+CMultiWalleniusNCHypergeometric::lnbico	rand/stocc.h	/^   double lnbico(void);                                    \/\/ natural log of binomial coefficients$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+CMultiWalleniusNCHypergeometric::m	rand/stocc.h	/^   int32_t * m;                                            \/\/ items of each color in urn$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::mean	rand/stocc.h	/^   void mean(double * mu);                                 \/\/ calculate approximate mean$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(double * mu)
+CMultiWalleniusNCHypergeometric::n	rand/stocc.h	/^   int32_t n;                                              \/\/ sample size$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::omega	rand/stocc.h	/^   double * omega;                                         \/\/ odds$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::phi2d	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::probability	rand/stocc.h	/^   double probability(int32_t * x);                        \/\/ calculate probability function$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(int32_t * x)
+CMultiWalleniusNCHypergeometric::r	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::rd	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::search_inflect	rand/stocc.h	/^   double search_inflect(double t_from, double t_to);      \/\/ used by integrate()$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(double t_from, double t_to)
+CMultiWalleniusNCHypergeometric::w	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::wr	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometric::x	rand/stocc.h	/^   int32_t * x;                                            \/\/ items of each color sampled$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+CMultiWalleniusNCHypergeometricMoments	rand/stocc.h	/^   CMultiWalleniusNCHypergeometricMoments(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8) $/;"	f	class:CMultiWalleniusNCHypergeometricMoments	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8)
+CMultiWalleniusNCHypergeometricMoments	rand/stocc.h	/^class CMultiWalleniusNCHypergeometricMoments: public CMultiWalleniusNCHypergeometric {$/;"	c	inherits:CMultiWalleniusNCHypergeometric
+CMultiWalleniusNCHypergeometricMoments::CMultiWalleniusNCHypergeometricMoments	rand/stocc.h	/^   CMultiWalleniusNCHypergeometricMoments(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8) $/;"	f	class:CMultiWalleniusNCHypergeometricMoments	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors, double accuracy=1.E-8)
+CMultiWalleniusNCHypergeometricMoments::loop	rand/stocc.h	/^   double loop(int32_t n, int c);                          \/\/ recursive loops$/;"	p	class:CMultiWalleniusNCHypergeometricMoments	access:protected	signature:(int32_t n, int c)
+CMultiWalleniusNCHypergeometricMoments::moments	rand/stocc.h	/^   double moments(double * mean, double * stddev, int32_t * combinations = 0);$/;"	p	class:CMultiWalleniusNCHypergeometricMoments	access:public	signature:(double * mean, double * stddev, int32_t * combinations = 0)
+CMultiWalleniusNCHypergeometricMoments::remaining	rand/stocc.h	/^   int32_t remaining[MAXCOLORS];                           \/\/ number of balls of color > c in urn$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+CMultiWalleniusNCHypergeometricMoments::sn	rand/stocc.h	/^   int32_t sn;                                             \/\/ number of combinations$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+CMultiWalleniusNCHypergeometricMoments::sx	rand/stocc.h	/^   double sx[MAXCOLORS];                                   \/\/ sum of x*f(x)$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+CMultiWalleniusNCHypergeometricMoments::sxx	rand/stocc.h	/^   double sxx[MAXCOLORS];                                  \/\/ sum of x^2*f(x)$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+CMultiWalleniusNCHypergeometricMoments::xi	rand/stocc.h	/^   int32_t xi[MAXCOLORS];                                  \/\/ x vector to calculate probability of$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+CMultiWalleniusNCHypergeometricMoments::xm	rand/stocc.h	/^   int32_t xm[MAXCOLORS];                                  \/\/ rounded approximate mean of x[i]$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+CRandomMersenne	rand/randomc.h	/^   CRandomMersenne(int seed) {         \/\/ Constructor$/;"	f	class:CRandomMersenne	access:public	signature:(int seed)
+CRandomMersenne	rand/randomc.h	/^class CRandomMersenne {                \/\/ Encapsulate random number generator$/;"	c
+CRandomMersenne::BRandom	rand/mersenne.cpp	/^uint32_t CRandomMersenne::BRandom() {$/;"	f	class:CRandomMersenne	signature:()
+CRandomMersenne::BRandom	rand/randomc.h	/^   uint32_t BRandom();                 \/\/ Output random bits$/;"	p	class:CRandomMersenne	access:public	signature:()
+CRandomMersenne::CRandomMersenne	rand/randomc.h	/^   CRandomMersenne(int seed) {         \/\/ Constructor$/;"	f	class:CRandomMersenne	access:public	signature:(int seed)
+CRandomMersenne::IRandom	rand/mersenne.cpp	/^int CRandomMersenne::IRandom(int min, int max) {$/;"	f	class:CRandomMersenne	signature:(int min, int max)
+CRandomMersenne::IRandom	rand/randomc.h	/^   int IRandom (int min, int max);     \/\/ Output random integer$/;"	p	class:CRandomMersenne	access:public	signature:(int min, int max)
+CRandomMersenne::IRandomX	rand/mersenne.cpp	/^int CRandomMersenne::IRandomX(int min, int max) {$/;"	f	class:CRandomMersenne	signature:(int min, int max)
+CRandomMersenne::IRandomX	rand/randomc.h	/^   int IRandomX(int min, int max);     \/\/ Output random integer, exact$/;"	p	class:CRandomMersenne	access:public	signature:(int min, int max)
+CRandomMersenne::Init0	rand/mersenne.cpp	/^void CRandomMersenne::Init0(int seed) {$/;"	f	class:CRandomMersenne	signature:(int seed)
+CRandomMersenne::Init0	rand/randomc.h	/^   void Init0(int seed);               \/\/ Basic initialization procedure$/;"	p	class:CRandomMersenne	access:private	signature:(int seed)
+CRandomMersenne::LastInterval	rand/randomc.h	/^   uint32_t LastInterval;              \/\/ Last interval length for IRandomX$/;"	m	class:CRandomMersenne	access:private
+CRandomMersenne::RLimit	rand/randomc.h	/^   uint32_t RLimit;                    \/\/ Rejection limit used by IRandomX$/;"	m	class:CRandomMersenne	access:private
+CRandomMersenne::Random	rand/mersenne.cpp	/^double CRandomMersenne::Random() {$/;"	f	class:CRandomMersenne	signature:()
+CRandomMersenne::Random	rand/randomc.h	/^   double Random();                    \/\/ Output random float$/;"	p	class:CRandomMersenne	access:public	signature:()
+CRandomMersenne::RandomInit	rand/mersenne.cpp	/^void CRandomMersenne::RandomInit(int seed) {$/;"	f	class:CRandomMersenne	signature:(int seed)
+CRandomMersenne::RandomInit	rand/randomc.h	/^   void RandomInit(int seed);          \/\/ Re-seed$/;"	p	class:CRandomMersenne	access:public	signature:(int seed)
+CRandomMersenne::RandomInitByArray	rand/mersenne.cpp	/^void CRandomMersenne::RandomInitByArray(int const seeds[], int NumSeeds) {$/;"	f	class:CRandomMersenne	signature:(int const seeds[], int NumSeeds)
+CRandomMersenne::RandomInitByArray	rand/randomc.h	/^   void RandomInitByArray(int const seeds[], int NumSeeds); \/\/ Seed by more than 32 bits$/;"	p	class:CRandomMersenne	access:public	signature:(int const seeds[], int NumSeeds)
+CRandomMersenne::mt	rand/randomc.h	/^   uint32_t mt[MERS_N];                \/\/ State vector$/;"	m	class:CRandomMersenne	access:private
+CRandomMersenne::mti	rand/randomc.h	/^   int mti;                            \/\/ Index into mt$/;"	m	class:CRandomMersenne	access:private
+CRandomMother	rand/randomc.h	/^   CRandomMother(int seed) {           \/\/ Constructor$/;"	f	class:CRandomMother	access:public	signature:(int seed)
+CRandomMother	rand/randomc.h	/^class CRandomMother {                  \/\/ Encapsulate random number generator$/;"	c
+CRandomMother::BRandom	rand/randomc.h	/^   uint32_t BRandom();                 \/\/ Output random bits$/;"	p	class:CRandomMother	access:public	signature:()
+CRandomMother::CRandomMother	rand/randomc.h	/^   CRandomMother(int seed) {           \/\/ Constructor$/;"	f	class:CRandomMother	access:public	signature:(int seed)
+CRandomMother::IRandom	rand/randomc.h	/^   int IRandom(int min, int max);      \/\/ Get integer random number in desired interval$/;"	p	class:CRandomMother	access:public	signature:(int min, int max)
+CRandomMother::Random	rand/randomc.h	/^   double Random();                    \/\/ Get floating point random number$/;"	p	class:CRandomMother	access:public	signature:()
+CRandomMother::RandomInit	rand/randomc.h	/^   void RandomInit(int seed);          \/\/ Initialization$/;"	p	class:CRandomMother	access:public	signature:(int seed)
+CRandomMother::x	rand/randomc.h	/^   uint32_t x[5];                      \/\/ History buffer$/;"	m	class:CRandomMother	access:protected
+CWalleniusNCHypergeometric	rand/stocc.h	/^   CWalleniusNCHypergeometric(int32_t n, int32_t m, int32_t N, double odds, double accuracy=1.E-8); \/\/ constructor$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds, double accuracy=1.E-8)
+CWalleniusNCHypergeometric	rand/stocc.h	/^class CWalleniusNCHypergeometric {$/;"	c
+CWalleniusNCHypergeometric::BernouilliH	rand/stocc.h	/^   int BernouilliH(int32_t x, double h, double rh, StochasticLib1 *sto); \/\/ used by rejection method$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t x, double h, double rh, StochasticLib1 *sto)
+CWalleniusNCHypergeometric::CWalleniusNCHypergeometric	rand/stocc.h	/^   CWalleniusNCHypergeometric(int32_t n, int32_t m, int32_t N, double odds, double accuracy=1.E-8); \/\/ constructor$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds, double accuracy=1.E-8)
+CWalleniusNCHypergeometric::E	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::MakeTable	rand/stocc.h	/^   int32_t MakeTable(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.); \/\/ make table of probabilities$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.)
+CWalleniusNCHypergeometric::N	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::SetParameters	rand/stocc.h	/^   void SetParameters(int32_t n, int32_t m, int32_t N, double odds); \/\/ change parameters$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds)
+CWalleniusNCHypergeometric::accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ Desired precision$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::bico	rand/stocc.h	/^   double bico, mFac, xFac;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::binoexpand	rand/stocc.h	/^   double binoexpand(void);                                \/\/ binomial expansion of integrand$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+CWalleniusNCHypergeometric::findpars	rand/stocc.h	/^   void findpars(void);                                    \/\/ calculate r, w, E$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+CWalleniusNCHypergeometric::integrate	rand/stocc.h	/^   double integrate(void);                                 \/\/ numerical integration$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+CWalleniusNCHypergeometric::integrate_step	rand/stocc.h	/^   double integrate_step(double a, double b);              \/\/ used by integrate()$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(double a, double b)
+CWalleniusNCHypergeometric::laplace	rand/stocc.h	/^   double laplace(void);                                   \/\/ Laplace's method with narrow integration interval$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+CWalleniusNCHypergeometric::lnbico	rand/stocc.h	/^   double lnbico(void);                                    \/\/ natural log of binomial coefficients$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+CWalleniusNCHypergeometric::m	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::mFac	rand/stocc.h	/^   double bico, mFac, xFac;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::mean	rand/stocc.h	/^   double mean(void);                                      \/\/ approximate mean$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(void)
+CWalleniusNCHypergeometric::mode	rand/stocc.h	/^   int32_t mode(void);                                     \/\/ calculate mode$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(void)
+CWalleniusNCHypergeometric::moments	rand/stocc.h	/^   double moments(double * mean, double * var);            \/\/ calculate exact mean and variance$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(double * mean, double * var)
+CWalleniusNCHypergeometric::n	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::omega	rand/stocc.h	/^   double omega;                                           \/\/ Odds$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::phi2d	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::probability	rand/stocc.h	/^   double probability(int32_t x);                          \/\/ calculate probability function$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t x)
+CWalleniusNCHypergeometric::r	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::rd	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::recursive	rand/stocc.h	/^   double recursive(void);                                 \/\/ recursive calculation$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+CWalleniusNCHypergeometric::search_inflect	rand/stocc.h	/^   double search_inflect(double t_from, double t_to);      \/\/ used by integrate()$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(double t_from, double t_to)
+CWalleniusNCHypergeometric::variance	rand/stocc.h	/^   double variance(void);                                  \/\/ approximate variance (poor approximation)$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(void)
+CWalleniusNCHypergeometric::w	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::wr	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::x	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::xFac	rand/stocc.h	/^   double bico, mFac, xFac;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::xLastBico	rand/stocc.h	/^   int32_t xLastBico;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::xLastFindpars	rand/stocc.h	/^   int32_t xLastFindpars;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::xmax	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ Minimum and maximum x$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+CWalleniusNCHypergeometric::xmin	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ Minimum and maximum x$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+DEFAULT_ACTIVITY	arvs.h	/^#define DEFAULT_ACTIVITY /;"	d
+DEFAULT_CD4_COUNT	person.h	/^#define DEFAULT_CD4_COUNT /;"	d
+DEFAULT_RESISTANCE	arvs.h	/^#define DEFAULT_RESISTANCE /;"	d
+DEFAULT_VIRAL_LOAD	person.h	/^#define DEFAULT_VIRAL_LOAD /;"	d
+DEFAULT_VIRUSTYPE	virus.h	/^#define DEFAULT_VIRUSTYPE /;"	d
+DEFAULT_VIRUS_TYPE	person.h	/^#define DEFAULT_VIRUS_TYPE /;"	d
+Dummy_align	rand/stocc.h	/^   int Dummy_align;                                        \/\/ filler$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+E	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+E	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+EPSILON	utils.h	/^#define EPSILON /;"	d
+ERFRES_B	rand/stocc.h	/^static const int ERFRES_B = 16;        \/\/ begin: -log2 of lowest precision$/;"	v
+ERFRES_E	rand/stocc.h	/^static const int ERFRES_E = 40;        \/\/ end:   -log2 of highest precision$/;"	v
+ERFRES_L	rand/stocc.h	/^static const int ERFRES_L = 48;        \/\/ length of each table$/;"	v
+ERFRES_N	rand/stocc.h	/^static const int ERFRES_N = (ERFRES_E-ERFRES_B)\/ERFRES_S+1; \/\/ number of tables$/;"	v
+ERFRES_S	rand/stocc.h	/^static const int ERFRES_S =  2;        \/\/ step size from begin to end$/;"	v
+EndOfProgram	rand/randomc.h	/^void EndOfProgram(void);               \/\/ System-specific exit code (userintf.cpp)$/;"	p	signature:(void)
+EndOfProgram	rand/userintf.cpp	/^void EndOfProgram() {$/;"	f	signature:()
+Erf	rand/stocc.h	/^double Erf (double x);                 \/\/ error function (wnchyppr.cpp)$/;"	p	signature:(double x)
+ErfRes	rand/stocc.h	/^extern "C" double ErfRes [ERFRES_N][ERFRES_L];$/;"	v
+FAK_LEN	rand/stocc.h	/^static const int FAK_LEN = 1024;       \/\/ length of factorial table$/;"	v
+FEMALE_FRACTION	utils.h	/^#define FEMALE_FRACTION /;"	d
+FallingFactorial	rand/stocc.h	/^double FallingFactorial(double a, double b); \/\/ Falling factorial (wnchyppr.cpp)$/;"	p	signature:(double a, double b)
+FatalError	rand/randomc.h	/^void FatalError(const char *ErrorText);\/\/ System-specific error reporting (userintf.cpp)$/;"	p	signature:(const char *ErrorText)
+FatalError	rand/userintf.cpp	/^void FatalError(const char * ErrorText) {$/;"	f	signature:(const char * ErrorText)
+FishersNCHyp	rand/stocc.h	/^   int32_t FishersNCHyp (int32_t n, int32_t m, int32_t N, double odds); \/\/ Fisher's noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds)
+FishersNCHypInversion	rand/stocc.h	/^   int32_t FishersNCHypInversion (int32_t n, int32_t m, int32_t N, double odds); \/\/ FishersNCHyp by inversion$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+FishersNCHypRatioOfUnifoms	rand/stocc.h	/^   int32_t FishersNCHypRatioOfUnifoms (int32_t n, int32_t m, int32_t N, double odds); \/\/ FishersNCHyp by ratio-of-uniforms$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+FloorLog2	rand/stocc.h	/^int32_t FloorLog2(float x);            \/\/ floor(log2(x)) for x > 0 (wnchyppr.cpp)$/;"	p	signature:(float x)
+HEADERS	Makefile	/^HEADERS = deaths.h transmission.h person.h arvs.h virus.h rand\/randomc.h rand\/stocc.h utils.h inputs.h$/;"	m
+HypInversionMod	rand/stoc1.cpp	/^int32_t StochasticLib1::HypInversionMod (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
+HypInversionMod	rand/stocc.h	/^   int32_t HypInversionMod (int32_t n, int32_t M, int32_t N);  \/\/ hypergeometric by inversion searching from mode$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, int32_t M, int32_t N)
+HypPatchwork	rand/stocc.h	/^   int32_t HypPatchwork (int32_t n, int32_t M, int32_t N); \/\/ hypergeometric by patchwork rejection$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t n, int32_t M, int32_t N)
+HypRatioOfUnifoms	rand/stoc1.cpp	/^int32_t StochasticLib1::HypRatioOfUnifoms (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
+HypRatioOfUnifoms	rand/stocc.h	/^   int32_t HypRatioOfUnifoms (int32_t n, int32_t M, int32_t N);\/\/ hypergeometric by ratio of uniforms method$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, int32_t M, int32_t N)
+Hyp_L	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+Hyp_c_pm	rand/stocc.h	/^      Hyp_ll, Hyp_lr, Hyp_c_pm, $/;"	m	class:StochasticLib2	access:protected
+Hyp_dl	rand/stocc.h	/^   double Hyp_dl, Hyp_dr, $/;"	m	class:StochasticLib2	access:protected
+Hyp_dr	rand/stocc.h	/^   double Hyp_dl, Hyp_dr, $/;"	m	class:StochasticLib2	access:protected
+Hyp_f1	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+Hyp_f2	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+Hyp_f4	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+Hyp_f5	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+Hyp_k1	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+Hyp_k2	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+Hyp_k4	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+Hyp_k5	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+Hyp_ll	rand/stocc.h	/^      Hyp_ll, Hyp_lr, Hyp_c_pm, $/;"	m	class:StochasticLib2	access:protected
+Hyp_lr	rand/stocc.h	/^      Hyp_ll, Hyp_lr, Hyp_c_pm, $/;"	m	class:StochasticLib2	access:protected
+Hyp_p1	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+Hyp_p2	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+Hyp_p3	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+Hyp_p4	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+Hyp_p5	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+Hyp_p6	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+Hyp_r1	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+Hyp_r2	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+Hyp_r4	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+Hyp_r5	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+Hypergeometric	rand/stoc1.cpp	/^int32_t StochasticLib1::Hypergeometric (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
+Hypergeometric	rand/stocc.h	/^   int32_t Hypergeometric (int32_t n, int32_t m, int32_t N); \/\/ Hypergeometric distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t n, int32_t m, int32_t N)
+Hypergeometric	rand/stocc.h	/^   int32_t Hypergeometric(int32_t n, int32_t M, int32_t N);\/\/ Hypergeometric distribution$/;"	p	class:StochasticLib2	access:public	signature:(int32_t n, int32_t M, int32_t N)
+ID	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+INITIAL_AGE	person.h	/^#define INITIAL_AGE /;"	d
+INT64_SUPPORTED	rand/randomc.h	/^  #define INT64_SUPPORTED /;"	d
+INTERCOURSE_FREQUENCY	transmission.h	/^#define INTERCOURSE_FREQUENCY /;"	d
+IRandom	rand/mersenne.cpp	/^int CRandomMersenne::IRandom(int min, int max) {$/;"	f	class:CRandomMersenne	signature:(int min, int max)
+IRandom	rand/randomc.h	/^   int IRandom (int min, int max);     \/\/ Output random integer$/;"	p	class:CRandomMersenne	access:public	signature:(int min, int max)
+IRandom	rand/randomc.h	/^   int IRandom(int min, int max);      \/\/ Get integer random number in desired interval$/;"	p	class:CRandomMother	access:public	signature:(int min, int max)
+IRandomX	rand/mersenne.cpp	/^int CRandomMersenne::IRandomX(int min, int max) {$/;"	f	class:CRandomMersenne	signature:(int min, int max)
+IRandomX	rand/randomc.h	/^   int IRandomX(int min, int max);     \/\/ Output random integer, exact$/;"	p	class:CRandomMersenne	access:public	signature:(int min, int max)
+Init0	rand/mersenne.cpp	/^void CRandomMersenne::Init0(int seed) {$/;"	f	class:CRandomMersenne	signature:(int seed)
+Init0	rand/randomc.h	/^   void Init0(int seed);               \/\/ Basic initialization procedure$/;"	p	class:CRandomMersenne	access:private	signature:(int seed)
+LDFLAGS	Makefile	/^LDFLAGS = $/;"	m
+LIBRARIES	Makefile	/^LIBRARIES =  $/;"	m
+LastInterval	rand/randomc.h	/^   uint32_t LastInterval;              \/\/ Last interval length for IRandomX$/;"	m	class:CRandomMersenne	access:private
+LnFac	rand/stoc1.cpp	/^double LnFac(int32_t n) {$/;"	f	signature:(int32_t n)
+LnFac	rand/stocc.h	/^double LnFac(int32_t n);               \/\/ log factorial (stoc1.cpp)$/;"	p	signature:(int32_t n)
+LnFacr	rand/stocc.h	/^double LnFacr(double x);               \/\/ log factorial of non-integer (wnchyppr.cpp)$/;"	p	signature:(double x)
+MALE_FRACTION	utils.h	/^#define MALE_FRACTION /;"	d
+MAXCOLORS	rand/stocc.h	/^   #define MAXCOLORS /;"	d
+MERS_A	rand/randomc.h	/^#define MERS_A /;"	d
+MERS_B	rand/randomc.h	/^#define MERS_B /;"	d
+MERS_C	rand/randomc.h	/^#define MERS_C /;"	d
+MERS_L	rand/randomc.h	/^#define MERS_L /;"	d
+MERS_M	rand/randomc.h	/^#define MERS_M /;"	d
+MERS_N	rand/randomc.h	/^#define MERS_N /;"	d
+MERS_R	rand/randomc.h	/^#define MERS_R /;"	d
+MERS_S	rand/randomc.h	/^#define MERS_S /;"	d
+MERS_T	rand/randomc.h	/^#define MERS_T /;"	d
+MERS_U	rand/randomc.h	/^#define MERS_U /;"	d
+MakeTable	rand/stocc.h	/^   double MakeTable(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.); \/\/ make table of probabilities$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.)
+MakeTable	rand/stocc.h	/^   int32_t MakeTable(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.); \/\/ make table of probabilities$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(double * table, int32_t MaxLength, int32_t * xfirst, int32_t * xlast, double cutoff = 0.)
+MultiComplWalleniusNCHyp	rand/stocc.h	/^   void MultiComplWalleniusNCHyp (int32_t * destination, int32_t * source, double * weights, int32_t n, int colors); \/\/ Multivariate complementary Wallenius noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t * destination, int32_t * source, double * weights, int32_t n, int colors)
+MultiFishersNCHyp	rand/stocc.h	/^   void MultiFishersNCHyp (int32_t * destination, int32_t * source, double * weights, int32_t n, int colors); \/\/ Multivariate Fisher's noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t * destination, int32_t * source, double * weights, int32_t n, int colors)
+MultiHypergeometric	rand/stoc1.cpp	/^void StochasticLib1::MultiHypergeometric (int32_t * destination, int32_t * source, int32_t n, int colors) {$/;"	f	class:StochasticLib1	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+MultiHypergeometric	rand/stocc.h	/^   void MultiHypergeometric (int32_t * destination, int32_t * source, int32_t n, int colors); \/\/ Multivariate hypergeometric distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+MultiWalleniusNCHyp	rand/stocc.h	/^   void MultiWalleniusNCHyp (int32_t * destination, int32_t * source, double * weights, int32_t n, int colors); \/\/ Multivariate Wallenius noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t * destination, int32_t * source, double * weights, int32_t n, int colors)
+Multinomial	rand/stoc1.cpp	/^void StochasticLib1::Multinomial (int32_t * destination, double * source, int32_t n, int colors) {$/;"	f	class:StochasticLib1	signature:(int32_t * destination, double * source, int32_t n, int colors)
+Multinomial	rand/stoc1.cpp	/^void StochasticLib1::Multinomial (int32_t * destination, int32_t * source, int32_t n, int colors) {$/;"	f	class:StochasticLib1	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+Multinomial	rand/stocc.h	/^   void Multinomial (int32_t * destination, double * source, int32_t n, int colors); \/\/ Multinomial distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t * destination, double * source, int32_t n, int colors)
+Multinomial	rand/stocc.h	/^   void Multinomial (int32_t * destination, int32_t * source, int32_t n, int colors);\/\/ Multinomial distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+N	rand/stocc.h	/^   int32_t N;                                              \/\/ total items in urn$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+N	rand/stocc.h	/^   int32_t n, N;                                           \/\/ copy of parameters$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+N	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+N	rand/stocc.h	/^   int32_t n, m, N;                                        \/\/ Parameters$/;"	m	class:CFishersNCHypergeometric	access:protected
+NUM_ARVS_IN_REGIMENT	utils.h	/^#define NUM_ARVS_IN_REGIMENT /;"	d
+NUM_ITERATIONS	utils.h	/^int NUM_ITERATIONS = 40;  \/\/ number of iterations for simulation in 3-month intervals$/;"	v
+Normal	rand/stoc1.cpp	/^double StochasticLib1::Normal(double m, double s) {$/;"	f	class:StochasticLib1	signature:(double m, double s)
+Normal	rand/stocc.h	/^   double Normal(double m, double s);  \/\/ Normal distribution$/;"	p	class:StochasticLib1	access:public	signature:(double m, double s)
+NormalTrunc	rand/stoc1.cpp	/^double StochasticLib1::NormalTrunc(double m, double s, double limit) {$/;"	f	class:StochasticLib1	signature:(double m, double s, double limit)
+NormalTrunc	rand/stocc.h	/^   double NormalTrunc(double m, double s, double limit); \/\/ Truncated normal distribution$/;"	p	class:StochasticLib1	access:public	signature:(double m, double s, double limit)
+NumSD	rand/stocc.h	/^int NumSD (double accuracy);           \/\/ used internally for determining summation interval$/;"	p	signature:(double accuracy)
+NumSDev	rand/stocc.h	/^extern "C" double NumSDev[ERFRES_N];$/;"	v
+OBJECTS	Makefile	/^OBJECTS = $(SOURCES:.c=.o)$/;"	m
+POPULATION_DATA	inputs.h	/^#define POPULATION_DATA /;"	d
+POPULATION_SIZE	utils.h	/^int POPULATION_SIZE = 50000;$/;"	v
+PREVALENCE_DATA	inputs.h	/^#define PREVALENCE_DATA /;"	d
+ParametersChanged	rand/stocc.h	/^   int ParametersChanged;$/;"	m	class:CFishersNCHypergeometric	access:protected
+Pois_c_pm	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Pois_dl	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+Pois_dr	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+Pois_f1	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+Pois_f2	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+Pois_f4	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+Pois_f5	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+Pois_k1	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+Pois_k2	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+Pois_k4	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+Pois_k5	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+Pois_l_my	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Pois_ll	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Pois_lr	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+Pois_p1	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+Pois_p2	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+Pois_p3	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+Pois_p4	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+Pois_p5	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+Pois_p6	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+Pois_r1	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+Pois_r2	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+Pois_r4	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+Pois_r5	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+Poisson	rand/stoc1.cpp	/^int32_t StochasticLib1::Poisson (double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+Poisson	rand/stocc.h	/^   int32_t Poisson (double L);                             \/\/ Poisson distribution$/;"	p	class:StochasticLib2	access:public	signature:(double L)
+Poisson	rand/stocc.h	/^   int32_t Poisson (double L);         \/\/ Poisson distribution$/;"	p	class:StochasticLib1	access:public	signature:(double L)
+PoissonF	rand/stocc.h	/^   static double PoissonF(int32_t k, double l_nu, double c_pm); \/\/ used by PoissonPatchwork$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t k, double l_nu, double c_pm)
+PoissonInver	rand/stoc1.cpp	/^int32_t StochasticLib1::PoissonInver(double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+PoissonInver	rand/stocc.h	/^   int32_t PoissonInver(double L);                         \/\/ poisson by inversion$/;"	p	class:StochasticLib1	access:protected	signature:(double L)
+PoissonLow	rand/stoc1.cpp	/^int32_t StochasticLib1::PoissonLow(double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+PoissonLow	rand/stocc.h	/^   int32_t PoissonLow(double L);                           \/\/ poisson for extremely low L$/;"	p	class:StochasticLib1	access:protected	signature:(double L)
+PoissonModeSearch	rand/stocc.h	/^   int32_t PoissonModeSearch(double L);                    \/\/ poisson by search from mode$/;"	p	class:StochasticLib2	access:protected	signature:(double L)
+PoissonPatchwork	rand/stocc.h	/^   int32_t PoissonPatchwork(double L);                     \/\/ poisson by patchwork rejection$/;"	p	class:StochasticLib2	access:protected	signature:(double L)
+PoissonRatioUniforms	rand/stoc1.cpp	/^int32_t StochasticLib1::PoissonRatioUniforms(double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+PoissonRatioUniforms	rand/stocc.h	/^   int32_t PoissonRatioUniforms(double L);                 \/\/ poisson by ratio of uniforms$/;"	p	class:StochasticLib1	access:protected	signature:(double L)
+RANDOMC_H	rand/randomc.h	/^#define RANDOMC_H$/;"	d
+RLimit	rand/randomc.h	/^   uint32_t RLimit;                    \/\/ Rejection limit used by IRandomX$/;"	m	class:CRandomMersenne	access:private
+Random	rand/mersenne.cpp	/^double CRandomMersenne::Random() {$/;"	f	class:CRandomMersenne	signature:()
+Random	rand/randomc.h	/^   double Random();                    \/\/ Get floating point random number$/;"	p	class:CRandomMother	access:public	signature:()
+Random	rand/randomc.h	/^   double Random();                    \/\/ Output random float$/;"	p	class:CRandomMersenne	access:public	signature:()
+RandomInit	rand/mersenne.cpp	/^void CRandomMersenne::RandomInit(int seed) {$/;"	f	class:CRandomMersenne	signature:(int seed)
+RandomInit	rand/randomc.h	/^   void RandomInit(int seed);          \/\/ Initialization$/;"	p	class:CRandomMother	access:public	signature:(int seed)
+RandomInit	rand/randomc.h	/^   void RandomInit(int seed);          \/\/ Re-seed$/;"	p	class:CRandomMersenne	access:public	signature:(int seed)
+RandomInitByArray	rand/mersenne.cpp	/^void CRandomMersenne::RandomInitByArray(int const seeds[], int NumSeeds) {$/;"	f	class:CRandomMersenne	signature:(int const seeds[], int NumSeeds)
+RandomInitByArray	rand/randomc.h	/^   void RandomInitByArray(int const seeds[], int NumSeeds); \/\/ Seed by more than 32 bits$/;"	p	class:CRandomMersenne	access:public	signature:(int const seeds[], int NumSeeds)
+SHAT1	rand/stoc1.cpp	/^const double SHAT1 = 2.943035529371538573;    \/\/ 8\/e$/;"	v
+SHAT2	rand/stoc1.cpp	/^const double SHAT2 = 0.8989161620588987408;   \/\/ 3-sqrt(12\/e)$/;"	v
+SOURCES	Makefile	/^SOURCES = simulation.cpp rand\/mersenne.cpp rand\/stoc1.cpp rand\/userintf.cpp$/;"	m
+STOCC_H	rand/stocc.h	/^#define STOCC_H$/;"	d
+STOC_BASE	rand/stocc.h	/^      #define STOC_BASE /;"	d
+STOC_BASE	rand/stocc.h	/^#define STOC_BASE /;"	d
+SetAccuracy	rand/stocc.h	/^   void SetAccuracy(double accur);     \/\/ Define accuracy of calculations$/;"	p	class:StochasticLib3	access:public	signature:(double accur)
+SetParameters	rand/stocc.h	/^   void SetParameters(int32_t n, int32_t * m, double * odds, int colors); \/\/ change parameters$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t * m, double * odds, int colors)
+SetParameters	rand/stocc.h	/^   void SetParameters(int32_t n, int32_t m, int32_t N, double odds); \/\/ change parameters$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds)
+Shuffle	rand/stoc1.cpp	/^void StochasticLib1::Shuffle(int * list, int min, int n) {$/;"	f	class:StochasticLib1	signature:(int * list, int min, int n)
+Shuffle	rand/stocc.h	/^   void Shuffle(int * list, int min, int n); \/\/ Shuffle integers$/;"	p	class:StochasticLib1	access:public	signature:(int * list, int min, int n)
+StochasticLib1	rand/stoc1.cpp	/^StochasticLib1::StochasticLib1 (int seed)$/;"	f	class:StochasticLib1	signature:(int seed)
+StochasticLib1	rand/stocc.h	/^   StochasticLib1 (int seed);          \/\/ Constructor$/;"	p	class:StochasticLib1	access:public	signature:(int seed)
+StochasticLib1	rand/stocc.h	/^class StochasticLib1 : public STOC_BASE {$/;"	c	inherits:STOC_BASE
+StochasticLib1::Bernoulli	rand/stoc1.cpp	/^int StochasticLib1::Bernoulli(double p) {$/;"	f	class:StochasticLib1	signature:(double p)
+StochasticLib1::Bernoulli	rand/stocc.h	/^   int Bernoulli(double p);            \/\/ Bernoulli distribution$/;"	p	class:StochasticLib1	access:public	signature:(double p)
+StochasticLib1::Binomial	rand/stoc1.cpp	/^int32_t StochasticLib1::Binomial (int32_t n, double p) {$/;"	f	class:StochasticLib1	signature:(int32_t n, double p)
+StochasticLib1::Binomial	rand/stocc.h	/^   int32_t Binomial (int32_t n, double p); \/\/ Binomial distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t n, double p)
+StochasticLib1::BinomialInver	rand/stoc1.cpp	/^int32_t StochasticLib1::BinomialInver (int32_t n, double p) {$/;"	f	class:StochasticLib1	signature:(int32_t n, double p)
+StochasticLib1::BinomialInver	rand/stocc.h	/^   int32_t BinomialInver (int32_t n, double p);            \/\/ binomial by inversion$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, double p)
+StochasticLib1::BinomialRatioOfUniforms	rand/stoc1.cpp	/^int32_t StochasticLib1::BinomialRatioOfUniforms (int32_t n, double p) {$/;"	f	class:StochasticLib1	signature:(int32_t n, double p)
+StochasticLib1::BinomialRatioOfUniforms	rand/stocc.h	/^   int32_t BinomialRatioOfUniforms (int32_t n, double p);  \/\/ binomial by ratio of uniforms$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, double p)
+StochasticLib1::HypInversionMod	rand/stoc1.cpp	/^int32_t StochasticLib1::HypInversionMod (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
+StochasticLib1::HypInversionMod	rand/stocc.h	/^   int32_t HypInversionMod (int32_t n, int32_t M, int32_t N);  \/\/ hypergeometric by inversion searching from mode$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, int32_t M, int32_t N)
+StochasticLib1::HypRatioOfUnifoms	rand/stoc1.cpp	/^int32_t StochasticLib1::HypRatioOfUnifoms (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
+StochasticLib1::HypRatioOfUnifoms	rand/stocc.h	/^   int32_t HypRatioOfUnifoms (int32_t n, int32_t M, int32_t N);\/\/ hypergeometric by ratio of uniforms method$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, int32_t M, int32_t N)
+StochasticLib1::Hypergeometric	rand/stoc1.cpp	/^int32_t StochasticLib1::Hypergeometric (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
+StochasticLib1::Hypergeometric	rand/stocc.h	/^   int32_t Hypergeometric (int32_t n, int32_t m, int32_t N); \/\/ Hypergeometric distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t n, int32_t m, int32_t N)
+StochasticLib1::MultiHypergeometric	rand/stoc1.cpp	/^void StochasticLib1::MultiHypergeometric (int32_t * destination, int32_t * source, int32_t n, int colors) {$/;"	f	class:StochasticLib1	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+StochasticLib1::MultiHypergeometric	rand/stocc.h	/^   void MultiHypergeometric (int32_t * destination, int32_t * source, int32_t n, int colors); \/\/ Multivariate hypergeometric distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+StochasticLib1::Multinomial	rand/stoc1.cpp	/^void StochasticLib1::Multinomial (int32_t * destination, double * source, int32_t n, int colors) {$/;"	f	class:StochasticLib1	signature:(int32_t * destination, double * source, int32_t n, int colors)
+StochasticLib1::Multinomial	rand/stoc1.cpp	/^void StochasticLib1::Multinomial (int32_t * destination, int32_t * source, int32_t n, int colors) {$/;"	f	class:StochasticLib1	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+StochasticLib1::Multinomial	rand/stocc.h	/^   void Multinomial (int32_t * destination, double * source, int32_t n, int colors); \/\/ Multinomial distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t * destination, double * source, int32_t n, int colors)
+StochasticLib1::Multinomial	rand/stocc.h	/^   void Multinomial (int32_t * destination, int32_t * source, int32_t n, int colors);\/\/ Multinomial distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t * destination, int32_t * source, int32_t n, int colors)
+StochasticLib1::Normal	rand/stoc1.cpp	/^double StochasticLib1::Normal(double m, double s) {$/;"	f	class:StochasticLib1	signature:(double m, double s)
+StochasticLib1::Normal	rand/stocc.h	/^   double Normal(double m, double s);  \/\/ Normal distribution$/;"	p	class:StochasticLib1	access:public	signature:(double m, double s)
+StochasticLib1::NormalTrunc	rand/stoc1.cpp	/^double StochasticLib1::NormalTrunc(double m, double s, double limit) {$/;"	f	class:StochasticLib1	signature:(double m, double s, double limit)
+StochasticLib1::NormalTrunc	rand/stocc.h	/^   double NormalTrunc(double m, double s, double limit); \/\/ Truncated normal distribution$/;"	p	class:StochasticLib1	access:public	signature:(double m, double s, double limit)
+StochasticLib1::Poisson	rand/stoc1.cpp	/^int32_t StochasticLib1::Poisson (double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+StochasticLib1::Poisson	rand/stocc.h	/^   int32_t Poisson (double L);         \/\/ Poisson distribution$/;"	p	class:StochasticLib1	access:public	signature:(double L)
+StochasticLib1::PoissonInver	rand/stoc1.cpp	/^int32_t StochasticLib1::PoissonInver(double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+StochasticLib1::PoissonInver	rand/stocc.h	/^   int32_t PoissonInver(double L);                         \/\/ poisson by inversion$/;"	p	class:StochasticLib1	access:protected	signature:(double L)
+StochasticLib1::PoissonLow	rand/stoc1.cpp	/^int32_t StochasticLib1::PoissonLow(double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+StochasticLib1::PoissonLow	rand/stocc.h	/^   int32_t PoissonLow(double L);                           \/\/ poisson for extremely low L$/;"	p	class:StochasticLib1	access:protected	signature:(double L)
+StochasticLib1::PoissonRatioUniforms	rand/stoc1.cpp	/^int32_t StochasticLib1::PoissonRatioUniforms(double L) {$/;"	f	class:StochasticLib1	signature:(double L)
+StochasticLib1::PoissonRatioUniforms	rand/stocc.h	/^   int32_t PoissonRatioUniforms(double L);                 \/\/ poisson by ratio of uniforms$/;"	p	class:StochasticLib1	access:protected	signature:(double L)
+StochasticLib1::Shuffle	rand/stoc1.cpp	/^void StochasticLib1::Shuffle(int * list, int min, int n) {$/;"	f	class:StochasticLib1	signature:(int * list, int min, int n)
+StochasticLib1::Shuffle	rand/stocc.h	/^   void Shuffle(int * list, int min, int n); \/\/ Shuffle integers$/;"	p	class:StochasticLib1	access:public	signature:(int * list, int min, int n)
+StochasticLib1::StochasticLib1	rand/stoc1.cpp	/^StochasticLib1::StochasticLib1 (int seed)$/;"	f	class:StochasticLib1	signature:(int seed)
+StochasticLib1::StochasticLib1	rand/stocc.h	/^   StochasticLib1 (int seed);          \/\/ Constructor$/;"	p	class:StochasticLib1	access:public	signature:(int seed)
+StochasticLib1::bino_a	rand/stocc.h	/^   double bino_a;                                          \/\/ hat center$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::bino_bound	rand/stocc.h	/^   int32_t bino_bound;                                     \/\/ upper bound$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::bino_g	rand/stocc.h	/^   double bino_g;                                          \/\/ value at mode$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::bino_h	rand/stocc.h	/^   double bino_h;                                          \/\/ hat width$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::bino_mode	rand/stocc.h	/^   int32_t bino_mode;                                      \/\/ mode$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::bino_n_last	rand/stocc.h	/^   int32_t bino_n_last;                                    \/\/ last n$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::bino_p_last	rand/stocc.h	/^   double bino_p_last;                                     \/\/ last p$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::bino_r1	rand/stocc.h	/^   double bino_r1;                                         \/\/ p\/(1-p) or ln(p\/(1-p))$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::fc_lnpk	rand/stoc1.cpp	/^double StochasticLib1::fc_lnpk(int32_t k, int32_t L, int32_t m, int32_t n) {$/;"	f	class:StochasticLib1	signature:(int32_t k, int32_t L, int32_t m, int32_t n)
+StochasticLib1::fc_lnpk	rand/stocc.h	/^   static double fc_lnpk(int32_t k, int32_t N_Mn, int32_t M, int32_t n); \/\/ used by Hypergeometric$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t k, int32_t N_Mn, int32_t M, int32_t n)
+StochasticLib1::hyp_N_last	rand/stocc.h	/^   int32_t  hyp_n_last, hyp_m_last, hyp_N_last;            \/\/ Last values of parameters$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_a	rand/stocc.h	/^   double hyp_a;                                           \/\/ hat center$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_bound	rand/stocc.h	/^   int32_t  hyp_bound;                                     \/\/ Safety upper bound$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_fm	rand/stocc.h	/^   double hyp_fm;                                          \/\/ Value at mode$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_h	rand/stocc.h	/^   double hyp_h;                                           \/\/ hat width$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_m_last	rand/stocc.h	/^   int32_t  hyp_n_last, hyp_m_last, hyp_N_last;            \/\/ Last values of parameters$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_mode	rand/stocc.h	/^   int32_t  hyp_mode, hyp_mp;                              \/\/ Mode, mode+1$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_mp	rand/stocc.h	/^   int32_t  hyp_mode, hyp_mp;                              \/\/ Mode, mode+1$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::hyp_n_last	rand/stocc.h	/^   int32_t  hyp_n_last, hyp_m_last, hyp_N_last;            \/\/ Last values of parameters$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::normal_x2	rand/stocc.h	/^   double normal_x2;  int normal_x2_valid;$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::normal_x2_valid	rand/stocc.h	/^   double normal_x2;  int normal_x2_valid;$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::pois_L_last	rand/stocc.h	/^   double pois_L_last;                                     \/\/ previous value of L$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::pois_a	rand/stocc.h	/^   double pois_a;                                          \/\/ hat center$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::pois_bound	rand/stocc.h	/^   int32_t  pois_bound;                                    \/\/ upper bound$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::pois_f0	rand/stocc.h	/^   double pois_f0;                                         \/\/ value at x=0 or at mode$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::pois_g	rand/stocc.h	/^   double pois_g;                                          \/\/ ln(L)$/;"	m	class:StochasticLib1	access:protected
+StochasticLib1::pois_h	rand/stocc.h	/^   double pois_h;                                          \/\/ hat width$/;"	m	class:StochasticLib1	access:protected
+StochasticLib2	rand/stocc.h	/^   StochasticLib2(int seed):StochasticLib1(seed){};        \/\/ Constructor  $/;"	f	class:StochasticLib2	access:public	signature:(int seed)
+StochasticLib2	rand/stocc.h	/^class StochasticLib2 : public StochasticLib1 {$/;"	c	inherits:StochasticLib1
+StochasticLib2::Bino_c_pm	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_dl	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_dr	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_f1	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_f2	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_f4	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_f5	rand/stocc.h	/^      Bino_f1, Bino_f2, Bino_f4, Bino_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_k1	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_k2	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_k4	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_k5	rand/stocc.h	/^   int32_t  Bino_k1, Bino_k2, Bino_k4, Bino_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_l_pq	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_ll	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_lr	rand/stocc.h	/^      Bino_ll, Bino_lr, Bino_l_pq, Bino_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_p1	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_p2	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_p3	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_p4	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_p5	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_p6	rand/stocc.h	/^      Bino_p1, Bino_p2, Bino_p3, Bino_p4, Bino_p5, Bino_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_r1	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_r2	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_r4	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Bino_r5	rand/stocc.h	/^   double Bino_dl, Bino_dr, Bino_r1, Bino_r2, Bino_r4, Bino_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Binomial	rand/stocc.h	/^   int32_t Binomial (int32_t n, double p);                 \/\/ Binomial distribution$/;"	p	class:StochasticLib2	access:public	signature:(int32_t n, double p)
+StochasticLib2::BinomialF	rand/stocc.h	/^   double BinomialF(int32_t k, int32_t n, double l_pq, double c_pm); \/\/ used by BinomialPatchwork$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t k, int32_t n, double l_pq, double c_pm)
+StochasticLib2::BinomialModeSearch	rand/stocc.h	/^   int32_t BinomialModeSearch(int32_t n, double p);        \/\/ binomial by search from mode$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t n, double p)
+StochasticLib2::BinomialPatchwork	rand/stocc.h	/^   int32_t BinomialPatchwork(int32_t n, double p);         \/\/ binomial by patchwork rejection$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t n, double p)
+StochasticLib2::HypPatchwork	rand/stocc.h	/^   int32_t HypPatchwork (int32_t n, int32_t M, int32_t N); \/\/ hypergeometric by patchwork rejection$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t n, int32_t M, int32_t N)
+StochasticLib2::Hyp_L	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_c_pm	rand/stocc.h	/^      Hyp_ll, Hyp_lr, Hyp_c_pm, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_dl	rand/stocc.h	/^   double Hyp_dl, Hyp_dr, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_dr	rand/stocc.h	/^   double Hyp_dl, Hyp_dr, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_f1	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_f2	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_f4	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_f5	rand/stocc.h	/^      Hyp_f1, Hyp_f2, Hyp_f4, Hyp_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_k1	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_k2	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_k4	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_k5	rand/stocc.h	/^   int32_t  Hyp_L, Hyp_k1, Hyp_k2, Hyp_k4, Hyp_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_ll	rand/stocc.h	/^      Hyp_ll, Hyp_lr, Hyp_c_pm, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_lr	rand/stocc.h	/^      Hyp_ll, Hyp_lr, Hyp_c_pm, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_p1	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_p2	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_p3	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_p4	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_p5	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_p6	rand/stocc.h	/^      Hyp_p1, Hyp_p2, Hyp_p3, Hyp_p4, Hyp_p5, Hyp_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_r1	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_r2	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_r4	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hyp_r5	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Hypergeometric	rand/stocc.h	/^   int32_t Hypergeometric(int32_t n, int32_t M, int32_t N);\/\/ Hypergeometric distribution$/;"	p	class:StochasticLib2	access:public	signature:(int32_t n, int32_t M, int32_t N)
+StochasticLib2::Pois_c_pm	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_dl	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_dr	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_f1	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_f2	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_f4	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_f5	rand/stocc.h	/^      Pois_f1, Pois_f2, Pois_f4, Pois_f5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_k1	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_k2	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_k4	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_k5	rand/stocc.h	/^   int32_t  Pois_k1, Pois_k2, Pois_k4, Pois_k5;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_l_my	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_ll	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_lr	rand/stocc.h	/^      Pois_ll, Pois_lr, Pois_l_my, Pois_c_pm,$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_p1	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_p2	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_p3	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_p4	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_p5	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_p6	rand/stocc.h	/^      Pois_p1, Pois_p2, Pois_p3, Pois_p4, Pois_p5, Pois_p6;$/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_r1	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_r2	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_r4	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Pois_r5	rand/stocc.h	/^   double Pois_dl, Pois_dr, Pois_r1, Pois_r2, Pois_r4, Pois_r5, $/;"	m	class:StochasticLib2	access:protected
+StochasticLib2::Poisson	rand/stocc.h	/^   int32_t Poisson (double L);                             \/\/ Poisson distribution$/;"	p	class:StochasticLib2	access:public	signature:(double L)
+StochasticLib2::PoissonF	rand/stocc.h	/^   static double PoissonF(int32_t k, double l_nu, double c_pm); \/\/ used by PoissonPatchwork$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t k, double l_nu, double c_pm)
+StochasticLib2::PoissonModeSearch	rand/stocc.h	/^   int32_t PoissonModeSearch(double L);                    \/\/ poisson by search from mode$/;"	p	class:StochasticLib2	access:protected	signature:(double L)
+StochasticLib2::PoissonPatchwork	rand/stocc.h	/^   int32_t PoissonPatchwork(double L);                     \/\/ poisson by patchwork rejection$/;"	p	class:StochasticLib2	access:protected	signature:(double L)
+StochasticLib2::StochasticLib2	rand/stocc.h	/^   StochasticLib2(int seed):StochasticLib1(seed){};        \/\/ Constructor  $/;"	f	class:StochasticLib2	access:public	signature:(int seed)
+StochasticLib3	rand/stocc.h	/^   StochasticLib3(int seed);           \/\/ Constructor$/;"	p	class:StochasticLib3	access:public	signature:(int seed)
+StochasticLib3	rand/stocc.h	/^class StochasticLib3 : public StochasticLib1 {$/;"	c	inherits:StochasticLib1
+StochasticLib3::FishersNCHyp	rand/stocc.h	/^   int32_t FishersNCHyp (int32_t n, int32_t m, int32_t N, double odds); \/\/ Fisher's noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::FishersNCHypInversion	rand/stocc.h	/^   int32_t FishersNCHypInversion (int32_t n, int32_t m, int32_t N, double odds); \/\/ FishersNCHyp by inversion$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::FishersNCHypRatioOfUnifoms	rand/stocc.h	/^   int32_t FishersNCHypRatioOfUnifoms (int32_t n, int32_t m, int32_t N, double odds); \/\/ FishersNCHyp by ratio-of-uniforms$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::MultiComplWalleniusNCHyp	rand/stocc.h	/^   void MultiComplWalleniusNCHyp (int32_t * destination, int32_t * source, double * weights, int32_t n, int colors); \/\/ Multivariate complementary Wallenius noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t * destination, int32_t * source, double * weights, int32_t n, int colors)
+StochasticLib3::MultiFishersNCHyp	rand/stocc.h	/^   void MultiFishersNCHyp (int32_t * destination, int32_t * source, double * weights, int32_t n, int colors); \/\/ Multivariate Fisher's noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t * destination, int32_t * source, double * weights, int32_t n, int colors)
+StochasticLib3::MultiWalleniusNCHyp	rand/stocc.h	/^   void MultiWalleniusNCHyp (int32_t * destination, int32_t * source, double * weights, int32_t n, int colors); \/\/ Multivariate Wallenius noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t * destination, int32_t * source, double * weights, int32_t n, int colors)
+StochasticLib3::SetAccuracy	rand/stocc.h	/^   void SetAccuracy(double accur);     \/\/ Define accuracy of calculations$/;"	p	class:StochasticLib3	access:public	signature:(double accur)
+StochasticLib3::StochasticLib3	rand/stocc.h	/^   StochasticLib3(int seed);           \/\/ Constructor$/;"	p	class:StochasticLib3	access:public	signature:(int seed)
+StochasticLib3::UseChopDown	rand/stocc.h	/^   int UseChopDown;                                        \/\/ use chop down inversion instead$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::WalleniusNCHyp	rand/stocc.h	/^   int32_t WalleniusNCHyp (int32_t n, int32_t m, int32_t N, double odds); \/\/ Wallenius noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::WalleniusNCHypInversion	rand/stocc.h	/^   int32_t WalleniusNCHypInversion (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by inversion method$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::WalleniusNCHypRatioOfUnifoms	rand/stocc.h	/^   int32_t WalleniusNCHypRatioOfUnifoms (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by ratio-of-uniforms$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::WalleniusNCHypTable	rand/stocc.h	/^   int32_t WalleniusNCHypTable (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by table method$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::WalleniusNCHypUrn	rand/stocc.h	/^   int32_t WalleniusNCHypUrn (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by urn model$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+StochasticLib3::accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ desired accuracy of calculations$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_N_last	rand/stocc.h	/^   int32_t fnc_n_last, fnc_m_last, fnc_N_last;             \/\/ last values of parameters$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_a	rand/stocc.h	/^   double fnc_a;                                           \/\/ hat center$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_bound	rand/stocc.h	/^   int32_t fnc_bound;                                      \/\/ upper bound$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_f0	rand/stocc.h	/^   double fnc_f0, fnc_scale;$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_h	rand/stocc.h	/^   double fnc_h;                                           \/\/ hat width$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_lfm	rand/stocc.h	/^   double fnc_lfm;                                         \/\/ ln(f(mode))$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_logb	rand/stocc.h	/^   double fnc_logb;                                        \/\/ ln(odds)$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_m_last	rand/stocc.h	/^   int32_t fnc_n_last, fnc_m_last, fnc_N_last;             \/\/ last values of parameters$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_n_last	rand/stocc.h	/^   int32_t fnc_n_last, fnc_m_last, fnc_N_last;             \/\/ last values of parameters$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_o_last	rand/stocc.h	/^   double fnc_o_last;$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::fnc_scale	rand/stocc.h	/^   double fnc_f0, fnc_scale;$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wall_tablen	rand/stocc.h	/^   int32_t wall_tablen;                                    \/\/ length of table$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wall_x1	rand/stocc.h	/^   int32_t wall_x1;                                        \/\/ lower x limit for table$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wall_ytable	rand/stocc.h	/^   double wall_ytable[WALL_TABLELENGTH];                   \/\/ table of probability values$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_N_last	rand/stocc.h	/^   int32_t wnc_n_last, wnc_m_last, wnc_N_last;             \/\/ previous parameters$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_a	rand/stocc.h	/^   double wnc_a;                                           \/\/ hat center$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_bound1	rand/stocc.h	/^   int32_t wnc_bound1, wnc_bound2;                         \/\/ lower and upper bound$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_bound2	rand/stocc.h	/^   int32_t wnc_bound1, wnc_bound2;                         \/\/ lower and upper bound$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_h	rand/stocc.h	/^   double wnc_h;                                           \/\/ hat width$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_k	rand/stocc.h	/^   double wnc_k;                                           \/\/ probability value at mode$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_m_last	rand/stocc.h	/^   int32_t wnc_n_last, wnc_m_last, wnc_N_last;             \/\/ previous parameters$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_mode	rand/stocc.h	/^   int32_t wnc_mode;                                       \/\/ mode$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_n_last	rand/stocc.h	/^   int32_t wnc_n_last, wnc_m_last, wnc_N_last;             \/\/ previous parameters$/;"	m	class:StochasticLib3	access:protected
+StochasticLib3::wnc_o_last	rand/stocc.h	/^   double wnc_o_last;$/;"	m	class:StochasticLib3	access:protected
+SumOfAll	rand/stocc.h	/^   void SumOfAll(void);                                    \/\/ calculates sum of proportional function for all x combinations$/;"	p	class:CMultiFishersNCHypergeometric	access:protected	signature:(void)
+TARGET	Makefile	/^TARGET = sim$/;"	m
+TIME_STEP	utils.h	/^#define TIME_STEP /;"	d
+TRANS_PROB	utils.h	/^#define TRANS_PROB /;"	d
+UseChopDown	rand/stocc.h	/^   int UseChopDown;                                        \/\/ use chop down inversion instead$/;"	m	class:StochasticLib3	access:protected
+V_INIT	utils.h	/^#define V_INIT /;"	d
+WALL_TABLELENGTH	rand/stocc.h	/^   #define WALL_TABLELENGTH /;"	d
+WalleniusNCHyp	rand/stocc.h	/^   int32_t WalleniusNCHyp (int32_t n, int32_t m, int32_t N, double odds); \/\/ Wallenius noncentral hypergeometric distribution$/;"	p	class:StochasticLib3	access:public	signature:(int32_t n, int32_t m, int32_t N, double odds)
+WalleniusNCHypInversion	rand/stocc.h	/^   int32_t WalleniusNCHypInversion (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by inversion method$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+WalleniusNCHypRatioOfUnifoms	rand/stocc.h	/^   int32_t WalleniusNCHypRatioOfUnifoms (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by ratio-of-uniforms$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+WalleniusNCHypTable	rand/stocc.h	/^   int32_t WalleniusNCHypTable (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by table method$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+WalleniusNCHypUrn	rand/stocc.h	/^   int32_t WalleniusNCHypUrn (int32_t n, int32_t m, int32_t N, double odds); \/\/ WalleniusNCHyp by urn model$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
+_GETCH_DEFINED_	rand/userintf.cpp	/^  #define _GETCH_DEFINED_$/;"	d	file:
+__arvs_h__	arvs.h	/^#define __arvs_h__$/;"	d
+__deaths_h__	deaths.h	/^#define __deaths_h__$/;"	d
+__inputs_h__	inputs.h	/^#define __inputs_h__$/;"	d
+__outputs_h__	outputs.h	/^#define __outputs_h__$/;"	d
+__person_h__	person.h	/^#define __person_h__$/;"	d
+__transmission_h__	transmission.h	/^#define __transmission_h__$/;"	d
+__utils_h__	utils.h	/^#define __utils_h__$/;"	d
+__viral_dynamics_h__	viral_dynamics.h	/^#define __viral_dynamics_h__$/;"	d
+__virus_h__	virus.h	/^#define __virus_h__$/;"	d
+accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ Desired precision$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ accuracy of calculation$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ accuracy$/;"	m	class:CFishersNCHypergeometric	access:protected
+accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ desired accuracy of calculations$/;"	m	class:StochasticLib3	access:protected
+accuracy	rand/stocc.h	/^   double accuracy;                                        \/\/ desired accuracy$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+activity_level	arvs.h	/^		float activity_level;$/;"	m	class:arvs	access:public
+age	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+arvs	arvs.h	/^		arvs();$/;"	p	class:arvs	access:public	signature:()
+arvs	arvs.h	/^		arvs(string, float);$/;"	p	class:arvs	access:public	signature:(string, float)
+arvs	arvs.h	/^arvs::arvs(){$/;"	f	class:arvs	signature:()
+arvs	arvs.h	/^arvs::arvs(string new_name, float new_activity_level){$/;"	f	class:arvs	signature:(string new_name, float new_activity_level)
+arvs	arvs.h	/^class arvs {$/;"	c
+arvs::activity_level	arvs.h	/^		float activity_level;$/;"	m	class:arvs	access:public
+arvs::arvs	arvs.h	/^		arvs();$/;"	p	class:arvs	access:public	signature:()
+arvs::arvs	arvs.h	/^		arvs(string, float);$/;"	p	class:arvs	access:public	signature:(string, float)
+arvs::arvs	arvs.h	/^arvs::arvs(){$/;"	f	class:arvs	signature:()
+arvs::arvs	arvs.h	/^arvs::arvs(string new_name, float new_activity_level){$/;"	f	class:arvs	signature:(string new_name, float new_activity_level)
+arvs::in_use	arvs.h	/^		bool in_use;$/;"	m	class:arvs	access:public
+arvs::name	arvs.h	/^		string name;$/;"	m	class:arvs	access:public
+arvs::prev_failure	arvs.h	/^		bool prev_failure;$/;"	m	class:arvs	access:public
+arvs::prev_toxicity_stop	arvs.h	/^		bool prev_toxicity_stop;$/;"	m	class:arvs	access:public
+arvs::prev_use	arvs.h	/^		bool prev_use;$/;"	m	class:arvs	access:public
+arvs::print_data	arvs.h	/^		void print_data() const;$/;"	p	class:arvs	access:public	signature:() const
+arvs::print_data	arvs.h	/^void arvs::print_data() const {$/;"	f	class:arvs	signature:() const
+arvs::resistance_level	arvs.h	/^		float resistance_level;$/;"	m	class:arvs	access:public
+bico	rand/stocc.h	/^   double bico, mFac, xFac;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+bico	rand/stocc.h	/^   double bico;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+bino_a	rand/stocc.h	/^   double bino_a;                                          \/\/ hat center$/;"	m	class:StochasticLib1	access:protected
+bino_bound	rand/stocc.h	/^   int32_t bino_bound;                                     \/\/ upper bound$/;"	m	class:StochasticLib1	access:protected
+bino_g	rand/stocc.h	/^   double bino_g;                                          \/\/ value at mode$/;"	m	class:StochasticLib1	access:protected
+bino_h	rand/stocc.h	/^   double bino_h;                                          \/\/ hat width$/;"	m	class:StochasticLib1	access:protected
+bino_mode	rand/stocc.h	/^   int32_t bino_mode;                                      \/\/ mode$/;"	m	class:StochasticLib1	access:protected
+bino_n_last	rand/stocc.h	/^   int32_t bino_n_last;                                    \/\/ last n$/;"	m	class:StochasticLib1	access:protected
+bino_p_last	rand/stocc.h	/^   double bino_p_last;                                     \/\/ last p$/;"	m	class:StochasticLib1	access:protected
+bino_r1	rand/stocc.h	/^   double bino_r1;                                         \/\/ p\/(1-p) or ln(p\/(1-p))$/;"	m	class:StochasticLib1	access:protected
+binoexpand	rand/stocc.h	/^   double binoexpand(void);                                \/\/ binomial expansion of integrand$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+binoexpand	rand/stocc.h	/^   double binoexpand(void);                                \/\/ binomial expansion of integrand$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+birth_data	utils.h	/^        explicit birth_data(int l, int h, float f)$/;"	f	struct:birth_data	access:public	signature:(int l, int h, float f)
+birth_data	utils.h	/^struct birth_data$/;"	s
+birth_data::birth_data	utils.h	/^        explicit birth_data(int l, int h, float f)$/;"	f	struct:birth_data	access:public	signature:(int l, int h, float f)
+birth_data::fraction	utils.h	/^        float fraction; \/\/ percentages$/;"	m	struct:birth_data	access:public
+birth_data::higher	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
+birth_data::lower	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
+calc_inf_death_risk	deaths.h	/^void calc_inf_death_risk(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
+cd4_count	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+check_bounds	utils.h	/^void inline check_bounds(float number, float lower, float higher)$/;"	f	signature:(float number, float lower, float higher)
+cholesterol	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+cmp	person.h	/^        struct cmp $/;"	s	class:person	access:public
+colors	rand/stocc.h	/^   int colors;                                             \/\/ number of different colors$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+colors	rand/stocc.h	/^   int colors;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+compute_infected	simulation.cpp	/^void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s)$/;"	f	signature:(list<person> &susceptible, list<person> &infected, StochasticLib1 &s)
+compute_infected	simulation.cpp	/^void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s);$/;"	p	file:	signature:(list<person> &susceptible, list<person> &infected, StochasticLib1 &s)
+cur_regiment	person.h	/^		multiset<arvs, cmp> cur_regiment; $/;"	m	class:person	access:public
+determine_resistance	simulation.cpp	/^void determine_resistance(person &p) {$/;"	f	signature:(person &p)
+evaluate_birth	utils.h	/^bool evaluate_birth(person &p, list<birth_data> &data, StochasticLib1 &s)$/;"	f	signature:(person &p, list<birth_data> &data, StochasticLib1 &s)
+fc_lnpk	rand/stoc1.cpp	/^double StochasticLib1::fc_lnpk(int32_t k, int32_t L, int32_t m, int32_t n) {$/;"	f	class:StochasticLib1	signature:(int32_t k, int32_t L, int32_t m, int32_t n)
+fc_lnpk	rand/stocc.h	/^   static double fc_lnpk(int32_t k, int32_t N_Mn, int32_t M, int32_t n); \/\/ used by Hypergeometric$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t k, int32_t N_Mn, int32_t M, int32_t n)
+female_f	inputs.h	/^        float male_f, female_f; \/\/ percentages$/;"	m	struct:prevalence_data	access:public
+findpars	rand/stocc.h	/^   void findpars(void);                                    \/\/ calculate r, w, E$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+findpars	rand/stocc.h	/^   void findpars(void);                                    \/\/ calculate r, w, E$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+fnc_N_last	rand/stocc.h	/^   int32_t fnc_n_last, fnc_m_last, fnc_N_last;             \/\/ last values of parameters$/;"	m	class:StochasticLib3	access:protected
+fnc_a	rand/stocc.h	/^   double fnc_a;                                           \/\/ hat center$/;"	m	class:StochasticLib3	access:protected
+fnc_bound	rand/stocc.h	/^   int32_t fnc_bound;                                      \/\/ upper bound$/;"	m	class:StochasticLib3	access:protected
+fnc_f0	rand/stocc.h	/^   double fnc_f0, fnc_scale;$/;"	m	class:StochasticLib3	access:protected
+fnc_h	rand/stocc.h	/^   double fnc_h;                                           \/\/ hat width$/;"	m	class:StochasticLib3	access:protected
+fnc_lfm	rand/stocc.h	/^   double fnc_lfm;                                         \/\/ ln(f(mode))$/;"	m	class:StochasticLib3	access:protected
+fnc_logb	rand/stocc.h	/^   double fnc_logb;                                        \/\/ ln(odds)$/;"	m	class:StochasticLib3	access:protected
+fnc_m_last	rand/stocc.h	/^   int32_t fnc_n_last, fnc_m_last, fnc_N_last;             \/\/ last values of parameters$/;"	m	class:StochasticLib3	access:protected
+fnc_n_last	rand/stocc.h	/^   int32_t fnc_n_last, fnc_m_last, fnc_N_last;             \/\/ last values of parameters$/;"	m	class:StochasticLib3	access:protected
+fnc_o_last	rand/stocc.h	/^   double fnc_o_last;$/;"	m	class:StochasticLib3	access:protected
+fnc_scale	rand/stocc.h	/^   double fnc_f0, fnc_scale;$/;"	m	class:StochasticLib3	access:protected
+fraction	utils.h	/^        float fraction; \/\/ percentages$/;"	m	struct:birth_data	access:public
+higher	inputs.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:prevalence_data	access:public
+higher	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
+hiv	person.h	/^		virus hiv; \/\/ TODO: is this needed?$/;"	m	class:person	access:public
+hyp_N_last	rand/stocc.h	/^   int32_t  hyp_n_last, hyp_m_last, hyp_N_last;            \/\/ Last values of parameters$/;"	m	class:StochasticLib1	access:protected
+hyp_a	rand/stocc.h	/^   double hyp_a;                                           \/\/ hat center$/;"	m	class:StochasticLib1	access:protected
+hyp_bound	rand/stocc.h	/^   int32_t  hyp_bound;                                     \/\/ Safety upper bound$/;"	m	class:StochasticLib1	access:protected
+hyp_fm	rand/stocc.h	/^   double hyp_fm;                                          \/\/ Value at mode$/;"	m	class:StochasticLib1	access:protected
+hyp_h	rand/stocc.h	/^   double hyp_h;                                           \/\/ hat width$/;"	m	class:StochasticLib1	access:protected
+hyp_m_last	rand/stocc.h	/^   int32_t  hyp_n_last, hyp_m_last, hyp_N_last;            \/\/ Last values of parameters$/;"	m	class:StochasticLib1	access:protected
+hyp_mode	rand/stocc.h	/^   int32_t  hyp_mode, hyp_mp;                              \/\/ Mode, mode+1$/;"	m	class:StochasticLib1	access:protected
+hyp_mp	rand/stocc.h	/^   int32_t  hyp_mode, hyp_mp;                              \/\/ Mode, mode+1$/;"	m	class:StochasticLib1	access:protected
+hyp_n_last	rand/stocc.h	/^   int32_t  hyp_n_last, hyp_m_last, hyp_N_last;            \/\/ Last values of parameters$/;"	m	class:StochasticLib1	access:protected
+import_birth_data	inputs.h	/^void import_birth_data(list<birth_data> &data){$/;"	f	signature:(list<birth_data> &data)
+import_population_data	inputs.h	/^void import_population_data(list<person> &data, CRandomMersenne &r)$/;"	f	signature:(list<person> &data, CRandomMersenne &r)
+import_prevalence_data	inputs.h	/^void import_prevalence_data(list<prevalence_data> &data){$/;"	f	signature:(list<prevalence_data> &data)
+in_use	arvs.h	/^		bool in_use;$/;"	m	class:arvs	access:public
+infect	transmission.h	/^bool infect(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
+infection_date	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+infection_probability	transmission.h	/^float infection_probability(person &p)$/;"	f	signature:(person &p)
+infectious_age	utils.h	/^bool inline infectious_age(person &elem)$/;"	f	signature:(person &elem)
+init_infect	simulation.cpp	/^bool init_infect(person &, prevalence_data &, StochasticLib1 &); $/;"	p	file:	signature:(person &, prevalence_data &, StochasticLib1 &)
+init_infect	simulation.cpp	/^bool init_infect(person &p, prevalence_data &pr, StochasticLib1 &s) $/;"	f	signature:(person &p, prevalence_data &pr, StochasticLib1 &s)
+initialize_population	simulation.cpp	/^void initialize_population(list<person> &,list<person> &, list<prevalence_data> &, StochasticLib1 &, CRandomMersenne &);$/;"	p	file:	signature:(list<person> &,list<person> &, list<prevalence_data> &, StochasticLib1 &, CRandomMersenne &)
+initialize_population	simulation.cpp	/^void initialize_population(list<person> &susceptible, list<person> &infected, list<prevalence_data> &pr_data, StochasticLib1 &s, CRandomMersenne &r)$/;"	f	signature:(list<person> &susceptible, list<person> &infected, list<prevalence_data> &pr_data, StochasticLib1 &s, CRandomMersenne &r)
+initialize_variables	utils.h	/^void initialize_variables(string flags[], const char* values[], int num_flags)$/;"	f	signature:(string flags[], const char* values[], int num_flags)
+int32_t	rand/randomc.h	/^  typedef   signed __int32  int32_t;$/;"	t
+int32_t	rand/randomc.h	/^  typedef   signed long int int32_t;$/;"	t
+int32_t	rand/randomc.h	/^  typedef signed int          int32_t;$/;"	t
+int64_t	rand/randomc.h	/^  typedef   signed __int64  int64_t;$/;"	t
+int64_t	rand/randomc.h	/^  typedef long long           int64_t;$/;"	t
+integrate	rand/stocc.h	/^   double integrate(void);                                 \/\/ numerical integration$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+integrate	rand/stocc.h	/^   double integrate(void);                                 \/\/ numerical integration$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+integrate_step	rand/stocc.h	/^   double integrate_step(double a, double b);              \/\/ used by integrate()$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(double a, double b)
+integrate_step	rand/stocc.h	/^   double integrate_step(double a, double b);              \/\/ used by integrate()$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(double a, double b)
+laplace	rand/stocc.h	/^   double laplace(void);                                   \/\/ Laplace's method with narrow integration interval$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+laplace	rand/stocc.h	/^   double laplace(void);                                   \/\/ Laplace's method with narrow integration interval$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+lnbico	rand/stocc.h	/^   double lnbico(void);                                    \/\/ natural log of binomial coefficients$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(void)
+lnbico	rand/stocc.h	/^   double lnbico(void);                                    \/\/ natural log of binomial coefficients$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+lng	rand/stocc.h	/^   double lng(int32_t * x);                                \/\/ natural log of proportional function$/;"	p	class:CMultiFishersNCHypergeometric	access:protected	signature:(int32_t * x)
+lng	rand/stocc.h	/^   double lng(int32_t x);                                  \/\/ natural log of proportional function$/;"	p	class:CFishersNCHypergeometric	access:protected	signature:(int32_t x)
+logodds	rand/stocc.h	/^   double logodds;                                         \/\/ ln odds ratio$/;"	m	class:CFishersNCHypergeometric	access:protected
+logodds	rand/stocc.h	/^   double logodds[MAXCOLORS];                              \/\/ log odds$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+loop	rand/stocc.h	/^   double loop(int32_t n, int c);                          \/\/ recursive loops used by SumOfAll$/;"	p	class:CMultiFishersNCHypergeometric	access:protected	signature:(int32_t n, int c)
+loop	rand/stocc.h	/^   double loop(int32_t n, int c);                          \/\/ recursive loops$/;"	p	class:CMultiWalleniusNCHypergeometricMoments	access:protected	signature:(int32_t n, int c)
+lower	inputs.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:prevalence_data	access:public
+lower	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
+m	rand/stocc.h	/^   int32_t * m;                                            \/\/ items of each color in urn$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+m	rand/stocc.h	/^   int32_t * m;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+m	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+m	rand/stocc.h	/^   int32_t n, m, N;                                        \/\/ Parameters$/;"	m	class:CFishersNCHypergeometric	access:protected
+mFac	rand/stocc.h	/^   double bico, mFac, xFac;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+mFac	rand/stocc.h	/^   double mFac, xFac;                                      \/\/ log factorials$/;"	m	class:CFishersNCHypergeometric	access:protected
+mFac	rand/stocc.h	/^   double mFac;                                            \/\/ sum of log m[i]!$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+main	simulation.cpp	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+male_f	inputs.h	/^        float male_f, female_f; \/\/ percentages$/;"	m	struct:prevalence_data	access:public
+mean	rand/stocc.h	/^   double mean(void);                                      \/\/ approximate mean$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(void)
+mean	rand/stocc.h	/^   double mean(void);                                      \/\/ calculate approximate mean$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(void)
+mean	rand/stocc.h	/^   void mean(double * mu);                                 \/\/ calculate approximate mean$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(double * mu)
+mean	rand/stocc.h	/^   void mean(double * mu);                                 \/\/ calculate approximate mean$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(double * mu)
+mode	rand/stocc.h	/^   int32_t mode(void);                                     \/\/ calculate mode (exact)$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(void)
+mode	rand/stocc.h	/^   int32_t mode(void);                                     \/\/ calculate mode$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(void)
+moments	rand/stocc.h	/^   double moments(double * mean, double * stddev, int32_t * combinations = 0); \/\/ calculate exact mean and variance$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(double * mean, double * stddev, int32_t * combinations = 0)
+moments	rand/stocc.h	/^   double moments(double * mean, double * stddev, int32_t * combinations = 0);$/;"	p	class:CMultiWalleniusNCHypergeometricMoments	access:public	signature:(double * mean, double * stddev, int32_t * combinations = 0)
+moments	rand/stocc.h	/^   double moments(double * mean, double * var);            \/\/ calculate exact mean and variance$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(double * mean, double * var)
+moments	rand/stocc.h	/^   double moments(double * mean, double * var);            \/\/ calculate exact mean and variance$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(double * mean, double * var)
+mt	rand/randomc.h	/^   uint32_t mt[MERS_N];                \/\/ State vector$/;"	m	class:CRandomMersenne	access:private
+mti	rand/randomc.h	/^   int mti;                            \/\/ Index into mt$/;"	m	class:CRandomMersenne	access:private
+mutaiton_present	virus.h	/^		bool mutaiton_present;$/;"	m	class:virus	access:public
+mutation_type	virus.h	/^		string mutation_type;$/;"	m	class:virus	access:public
+n	rand/stocc.h	/^   int32_t n, N;                                           \/\/ copy of parameters$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+n	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+n	rand/stocc.h	/^   int32_t n, m, N;                                        \/\/ Parameters$/;"	m	class:CFishersNCHypergeometric	access:protected
+n	rand/stocc.h	/^   int32_t n;                                              \/\/ sample size$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+name	arvs.h	/^		string name;$/;"	m	class:arvs	access:public
+normal_x2	rand/stocc.h	/^   double normal_x2;  int normal_x2_valid;$/;"	m	class:StochasticLib1	access:protected
+normal_x2_valid	rand/stocc.h	/^   double normal_x2;  int normal_x2_valid;$/;"	m	class:StochasticLib1	access:protected
+num_from_fraction	utils.h	/^int inline  num_from_fraction(float fraction, char sex)$/;"	f	signature:(float fraction, char sex)
+odds	rand/stocc.h	/^   double * odds;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+odds	rand/stocc.h	/^   double odds;                                            \/\/ odds ratio$/;"	m	class:CFishersNCHypergeometric	access:protected
+omega	rand/stocc.h	/^   double * omega;                                         \/\/ odds$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+omega	rand/stocc.h	/^   double omega;                                           \/\/ Odds$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+operator ()	person.h	/^			bool operator () (const arvs& left, const arvs& right) const $/;"	f	struct:person::cmp	access:public	signature:(const arvs& left, const arvs& right) const
+operator ()	person.h	/^	public: void operator()(arvs x) { x.print_data(); }$/;"	f	struct:print_arv	access:public	signature:(arvs x)
+operator <<	person.h	/^        friend ostream &operator << (ostream &cout, const person &elem)$/;"	f	class:person	access:friend	signature:(ostream &cout, const person &elem)
+output_prevalence	outputs.h	/^void output_prevalence(StochasticLib1 &s, list<person> &susceptible, list<person> &infected)$/;"	f	signature:(StochasticLib1 &s, list<person> &susceptible, list<person> &infected)
+person	person.h	/^		explicit person();$/;"	p	class:person	access:public	signature:()
+person	person.h	/^class person $/;"	c
+person	person.h	/^person::person()$/;"	f	class:person	signature:()
+person::ID	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+person::age	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+person::cd4_count	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+person::cholesterol	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+person::cmp	person.h	/^        struct cmp $/;"	s	class:person	access:public
+person::cmp::operator ()	person.h	/^			bool operator () (const arvs& left, const arvs& right) const $/;"	f	struct:person::cmp	access:public	signature:(const arvs& left, const arvs& right) const
+person::cur_regiment	person.h	/^		multiset<arvs, cmp> cur_regiment; $/;"	m	class:person	access:public
+person::hiv	person.h	/^		virus hiv; \/\/ TODO: is this needed?$/;"	m	class:person	access:public
+person::infection_date	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+person::operator <<	person.h	/^        friend ostream &operator << (ostream &cout, const person &elem)$/;"	f	class:person	access:friend	signature:(ostream &cout, const person &elem)
+person::person	person.h	/^		explicit person();$/;"	p	class:person	access:public	signature:()
+person::person	person.h	/^person::person()$/;"	f	class:person	signature:()
+person::print_data	person.h	/^        void print_data();$/;"	p	class:person	access:public	signature:()
+person::print_data	person.h	/^void person::print_data() $/;"	f	class:person	signature:()
+person::risk_group	person.h	/^		string risk_group; \/\/ IDU, MSM, blood etc$/;"	m	class:person	access:public
+person::sex	person.h	/^		char sex;$/;"	m	class:person	access:public
+person::start_arv	person.h	/^		void start_arv(arvs &);	$/;"	p	class:person	access:public	signature:(arvs &)
+person::start_arv	person.h	/^void person::start_arv(arvs &new_arv)$/;"	f	class:person	signature:(arvs &new_arv)
+person::status	person.h	/^        string status;		$/;"	m	class:person	access:public
+person::stop_arv	person.h	/^		void stop_arv(string, string);$/;"	p	class:person	access:public	signature:(string, string)
+person::stop_arv	person.h	/^void person::stop_arv(string arv, string reason)$/;"	f	class:person	signature:(string arv, string reason)
+person::viral_load	person.h	/^        float viral_load; \/\/ TODO: this has overlap in virus.h also, log$/;"	m	class:person	access:public
+person::virus_type	person.h	/^        string virus_type; \/\/ TODO: same as viral_load$/;"	m	class:person	access:public
+phi2d	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+phi2d	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+pois_L_last	rand/stocc.h	/^   double pois_L_last;                                     \/\/ previous value of L$/;"	m	class:StochasticLib1	access:protected
+pois_a	rand/stocc.h	/^   double pois_a;                                          \/\/ hat center$/;"	m	class:StochasticLib1	access:protected
+pois_bound	rand/stocc.h	/^   int32_t  pois_bound;                                    \/\/ upper bound$/;"	m	class:StochasticLib1	access:protected
+pois_f0	rand/stocc.h	/^   double pois_f0;                                         \/\/ value at x=0 or at mode$/;"	m	class:StochasticLib1	access:protected
+pois_g	rand/stocc.h	/^   double pois_g;                                          \/\/ ln(L)$/;"	m	class:StochasticLib1	access:protected
+pois_h	rand/stocc.h	/^   double pois_h;                                          \/\/ hat width$/;"	m	class:StochasticLib1	access:protected
+population_stats	simulation.cpp	/^void population_stats(list<person> &, int &);$/;"	p	file:	signature:(list<person> &, int &)
+prev_failure	arvs.h	/^		bool prev_failure;$/;"	m	class:arvs	access:public
+prev_toxicity_stop	arvs.h	/^		bool prev_toxicity_stop;$/;"	m	class:arvs	access:public
+prev_use	arvs.h	/^		bool prev_use;$/;"	m	class:arvs	access:public
+prevalence_data	inputs.h	/^        explicit prevalence_data(int l, int h, float m, float f)$/;"	f	struct:prevalence_data	access:public	signature:(int l, int h, float m, float f)
+prevalence_data	inputs.h	/^struct prevalence_data$/;"	s
+prevalence_data::female_f	inputs.h	/^        float male_f, female_f; \/\/ percentages$/;"	m	struct:prevalence_data	access:public
+prevalence_data::higher	inputs.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:prevalence_data	access:public
+prevalence_data::lower	inputs.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:prevalence_data	access:public
+prevalence_data::male_f	inputs.h	/^        float male_f, female_f; \/\/ percentages$/;"	m	struct:prevalence_data	access:public
+prevalence_data::prevalence_data	inputs.h	/^        explicit prevalence_data(int l, int h, float m, float f)$/;"	f	struct:prevalence_data	access:public	signature:(int l, int h, float m, float f)
+print	utils.h	/^void inline print(person &one)$/;"	f	signature:(person &one)
+print_arv	person.h	/^struct print_arv $/;"	s
+print_arv::operator ()	person.h	/^	public: void operator()(arvs x) { x.print_data(); }$/;"	f	struct:print_arv	access:public	signature:(arvs x)
+print_data	arvs.h	/^		void print_data() const;$/;"	p	class:arvs	access:public	signature:() const
+print_data	arvs.h	/^void arvs::print_data() const {$/;"	f	class:arvs	signature:() const
+print_data	person.h	/^        void print_data();$/;"	p	class:person	access:public	signature:()
+print_data	person.h	/^void person::print_data() $/;"	f	class:person	signature:()
+print_population_stats	utils.h	/^void print_population_stats(list<person> &population, int &year) $/;"	f	signature:(list<person> &population, int &year)
+print_prevalence	utils.h	/^void print_prevalence(list<person> &susceptible, list<person> &infected)$/;"	f	signature:(list<person> &susceptible, list<person> &infected)
+probability	rand/stocc.h	/^   double probability(int32_t * x);                        \/\/ calculate probability function$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(int32_t * x)
+probability	rand/stocc.h	/^   double probability(int32_t * x);                        \/\/ calculate probability function$/;"	p	class:CMultiWalleniusNCHypergeometric	access:public	signature:(int32_t * x)
+probability	rand/stocc.h	/^   double probability(int32_t x);                          \/\/ calculate probability function$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(int32_t x)
+probability	rand/stocc.h	/^   double probability(int32_t x);                          \/\/ calculate probability function$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(int32_t x)
+probabilityRatio	rand/stocc.h	/^   double probabilityRatio(int32_t x, int32_t x0);         \/\/ calculate probability f(x)\/f(x0)$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(int32_t x, int32_t x0)
+process_flags	simulation.cpp	/^int process_flags(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+process_flags	simulation.cpp	/^int process_flags(int argc, char* argv[]);$/;"	p	file:	signature:(int argc, char* argv[])
+process_susceptible_deaths	deaths.h	/^void process_susceptible_deaths()$/;"	f	signature:()
+process_virus_type	simulation.cpp	/^void process_virus_type(person &, StochasticLib1 &);$/;"	p	file:	signature:(person &, StochasticLib1 &)
+process_virus_type	simulation.cpp	/^void process_virus_type(person &p, StochasticLib1 &sto) $/;"	f	signature:(person &p, StochasticLib1 &sto)
+r	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+r	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+rd	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+rd	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+recursive	rand/stocc.h	/^   double recursive(void);                                 \/\/ recursive calculation$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(void)
+remaining	rand/stocc.h	/^   int32_t remaining[MAXCOLORS];                           \/\/ number of balls of color > c in urn$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+remaining	rand/stocc.h	/^   int32_t remaining[MAXCOLORS];                           \/\/ number of balls of color > c in urn$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+resistance_level	arvs.h	/^		float resistance_level;$/;"	m	class:arvs	access:public
+risk_group	person.h	/^		string risk_group; \/\/ IDU, MSM, blood etc$/;"	m	class:person	access:public
+rsum	rand/stocc.h	/^   double rsum;                                            \/\/ reciprocal sum of proportional function$/;"	m	class:CFishersNCHypergeometric	access:protected
+rsum	rand/stocc.h	/^   double rsum;                                            \/\/ reciprocal sum of proportional function$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+scale	rand/stocc.h	/^   double scale;                                           \/\/ scale to apply to lng function$/;"	m	class:CFishersNCHypergeometric	access:protected
+scale	rand/stocc.h	/^   double scale;                                           \/\/ scale to apply to lng function$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+search_inflect	rand/stocc.h	/^   double search_inflect(double t_from, double t_to);      \/\/ used by integrate()$/;"	p	class:CMultiWalleniusNCHypergeometric	access:protected	signature:(double t_from, double t_to)
+search_inflect	rand/stocc.h	/^   double search_inflect(double t_from, double t_to);      \/\/ used by integrate()$/;"	p	class:CWalleniusNCHypergeometric	access:protected	signature:(double t_from, double t_to)
+set_age	simulation.cpp	/^void set_age(CRandomMersenne &, person &, int, int);$/;"	p	file:	signature:(CRandomMersenne &, person &, int, int)
+set_age	utils.h	/^void inline set_age(CRandomMersenne &r, person &p, int lower, int higher)$/;"	f	signature:(CRandomMersenne &r, person &p, int lower, int higher)
+set_sex	utils.h	/^void inline set_sex(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
+sex	person.h	/^		char sex;$/;"	m	class:person	access:public
+sn	rand/stocc.h	/^   int32_t sn;                                             \/\/ number of combinations$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+sn	rand/stocc.h	/^   int32_t sn;                                             \/\/ number of possible combinations of x$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+start_arv	person.h	/^		void start_arv(arvs &);	$/;"	p	class:person	access:public	signature:(arvs &)
+start_arv	person.h	/^void person::start_arv(arvs &new_arv)$/;"	f	class:person	signature:(arvs &new_arv)
+status	person.h	/^        string status;		$/;"	m	class:person	access:public
+stop_arv	person.h	/^		void stop_arv(string, string);$/;"	p	class:person	access:public	signature:(string, string)
+stop_arv	person.h	/^void person::stop_arv(string arv, string reason)$/;"	f	class:person	signature:(string arv, string reason)
+sx	rand/stocc.h	/^   double sx[MAXCOLORS];                                   \/\/ sum of x*f(x) or mean$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+sx	rand/stocc.h	/^   double sx[MAXCOLORS];                                   \/\/ sum of x*f(x)$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+sxx	rand/stocc.h	/^   double sxx[MAXCOLORS];                                  \/\/ sum of x^2*f(x) or variance$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+sxx	rand/stocc.h	/^   double sxx[MAXCOLORS];                                  \/\/ sum of x^2*f(x)$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+trans_functor	utils.h	/^void trans_functor(person &p)$/;"	f	signature:(person &p)
+type	virus.h	/^		string type;$/;"	m	class:virus	access:public
+uint32_t	rand/randomc.h	/^  typedef unsigned __int32 uint32_t;$/;"	t
+uint32_t	rand/randomc.h	/^  typedef unsigned int       uint32_t;$/;"	t
+uint32_t	rand/randomc.h	/^  typedef unsigned long int uint32_t;$/;"	t
+uint64_t	rand/randomc.h	/^  typedef unsigned __int64 uint64_t;$/;"	t
+uint64_t	rand/randomc.h	/^  typedef unsigned long long uint64_t;$/;"	t
+update_age	utils.h	/^void inline update_age(person &p) $/;"	f	signature:(person &p)
+update_births	simulation.cpp	/^void update_births(list<person> &, list<person> &, list<birth_data> &, StochasticLib1 &);$/;"	p	file:	signature:(list<person> &, list<person> &, list<birth_data> &, StochasticLib1 &)
+update_births	simulation.cpp	/^void update_births(list<person> &susceptible, list<person> &infected, list<birth_data> &data, StochasticLib1& s)$/;"	f	signature:(list<person> &susceptible, list<person> &infected, list<birth_data> &data, StochasticLib1& s)
+update_cd4_count	simulation.cpp	/^void update_cd4_count(person &, StochasticLib1 &);$/;"	p	file:	signature:(person &, StochasticLib1 &)
+update_cd4_count	simulation.cpp	/^void update_cd4_count(person &p, StochasticLib1 &sto)$/;"	f	signature:(person &p, StochasticLib1 &sto)
+update_population	simulation.cpp	/^void update_population(list<person> &infected, list<person> &susceptible, StochasticLib1& sto)$/;"	f	signature:(list<person> &infected, list<person> &susceptible, StochasticLib1& sto)
+update_population	simulation.cpp	/^void update_population(list<person> &infected, list<person> &susceptible, StochasticLib1& sto);$/;"	p	file:	signature:(list<person> &infected, list<person> &susceptible, StochasticLib1& sto)
+update_viral_load	simulation.cpp	/^void update_viral_load(person &, StochasticLib1 &);$/;"	p	file:	signature:(person &, StochasticLib1 &)
+update_viral_load	simulation.cpp	/^void update_viral_load(person &p, StochasticLib1 &sto)$/;"	f	signature:(person &p, StochasticLib1 &sto)
+validate_flags	utils.h	/^void validate_flags(string flags[], const char* values[], int num_flags)$/;"	f	signature:(string flags[], const char* values[], int num_flags)
+variance	rand/stocc.h	/^   double variance(void);                                  \/\/ approximate variance (poor approximation)$/;"	p	class:CWalleniusNCHypergeometric	access:public	signature:(void)
+variance	rand/stocc.h	/^   double variance(void);                                  \/\/ approximate variance$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(void)
+variance	rand/stocc.h	/^   void variance(double * var);                            \/\/ calculate approximate variance$/;"	p	class:CMultiFishersNCHypergeometric	access:public	signature:(double * var)
+verify_sex_age	utils.h	/^bool inline  verify_sex_age(person &p, char sex, float lower, float higher)$/;"	f	signature:(person &p, char sex, float lower, float higher)
+viral_load	person.h	/^        float viral_load; \/\/ TODO: this has overlap in virus.h also, log$/;"	m	class:person	access:public
+viral_load	virus.h	/^		float viral_load;$/;"	m	class:virus	access:public
+virus	virus.h	/^		virus();$/;"	p	class:virus	access:public	signature:()
+virus	virus.h	/^		virus(string);$/;"	p	class:virus	access:public	signature:(string)
+virus	virus.h	/^class virus $/;"	c
+virus	virus.h	/^virus::virus() $/;"	f	class:virus	signature:()
+virus	virus.h	/^virus::virus(string new_type)$/;"	f	class:virus	signature:(string new_type)
+virus::mutaiton_present	virus.h	/^		bool mutaiton_present;$/;"	m	class:virus	access:public
+virus::mutation_type	virus.h	/^		string mutation_type;$/;"	m	class:virus	access:public
+virus::type	virus.h	/^		string type;$/;"	m	class:virus	access:public
+virus::viral_load	virus.h	/^		float viral_load;$/;"	m	class:virus	access:public
+virus::virus	virus.h	/^		virus();$/;"	p	class:virus	access:public	signature:()
+virus::virus	virus.h	/^		virus(string);$/;"	p	class:virus	access:public	signature:(string)
+virus::virus	virus.h	/^virus::virus() $/;"	f	class:virus	signature:()
+virus::virus	virus.h	/^virus::virus(string new_type)$/;"	f	class:virus	signature:(string new_type)
+virus_type	person.h	/^        string virus_type; \/\/ TODO: same as viral_load$/;"	m	class:person	access:public
+w	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+w	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+wall_tablen	rand/stocc.h	/^   int32_t wall_tablen;                                    \/\/ length of table$/;"	m	class:StochasticLib3	access:protected
+wall_x1	rand/stocc.h	/^   int32_t wall_x1;                                        \/\/ lower x limit for table$/;"	m	class:StochasticLib3	access:protected
+wall_ytable	rand/stocc.h	/^   double wall_ytable[WALL_TABLELENGTH];                   \/\/ table of probability values$/;"	m	class:StochasticLib3	access:protected
+wnc_N_last	rand/stocc.h	/^   int32_t wnc_n_last, wnc_m_last, wnc_N_last;             \/\/ previous parameters$/;"	m	class:StochasticLib3	access:protected
+wnc_a	rand/stocc.h	/^   double wnc_a;                                           \/\/ hat center$/;"	m	class:StochasticLib3	access:protected
+wnc_bound1	rand/stocc.h	/^   int32_t wnc_bound1, wnc_bound2;                         \/\/ lower and upper bound$/;"	m	class:StochasticLib3	access:protected
+wnc_bound2	rand/stocc.h	/^   int32_t wnc_bound1, wnc_bound2;                         \/\/ lower and upper bound$/;"	m	class:StochasticLib3	access:protected
+wnc_h	rand/stocc.h	/^   double wnc_h;                                           \/\/ hat width$/;"	m	class:StochasticLib3	access:protected
+wnc_k	rand/stocc.h	/^   double wnc_k;                                           \/\/ probability value at mode$/;"	m	class:StochasticLib3	access:protected
+wnc_m_last	rand/stocc.h	/^   int32_t wnc_n_last, wnc_m_last, wnc_N_last;             \/\/ previous parameters$/;"	m	class:StochasticLib3	access:protected
+wnc_mode	rand/stocc.h	/^   int32_t wnc_mode;                                       \/\/ mode$/;"	m	class:StochasticLib3	access:protected
+wnc_n_last	rand/stocc.h	/^   int32_t wnc_n_last, wnc_m_last, wnc_N_last;             \/\/ previous parameters$/;"	m	class:StochasticLib3	access:protected
+wnc_o_last	rand/stocc.h	/^   double wnc_o_last;$/;"	m	class:StochasticLib3	access:protected
+wr	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+wr	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+x	rand/randomc.h	/^   uint32_t x[5];                      \/\/ History buffer$/;"	m	class:CRandomMother	access:protected
+x	rand/stocc.h	/^   int32_t * x;                                            \/\/ items of each color sampled$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
+x	rand/stocc.h	/^   int32_t n, m, N, x;                                     \/\/ Parameters$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+xFac	rand/stocc.h	/^   double bico, mFac, xFac;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+xFac	rand/stocc.h	/^   double mFac, xFac;                                      \/\/ log factorials$/;"	m	class:CFishersNCHypergeometric	access:protected
+xLast	rand/stocc.h	/^   int32_t xLast;$/;"	m	class:CFishersNCHypergeometric	access:protected
+xLastBico	rand/stocc.h	/^   int32_t xLastBico;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+xLastFindpars	rand/stocc.h	/^   int32_t xLastFindpars;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+xi	rand/stocc.h	/^   int32_t xi[MAXCOLORS];                                  \/\/ x vector to calculate probability of$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+xi	rand/stocc.h	/^   int32_t xi[MAXCOLORS];                                  \/\/ x vector to calculate probability of$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+xm	rand/stocc.h	/^   int32_t xm[MAXCOLORS];                                  \/\/ rounded approximate mean of x[i]$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
+xm	rand/stocc.h	/^   int32_t xm[MAXCOLORS];                                  \/\/ rounded approximate mean of x[i]$/;"	m	class:CMultiWalleniusNCHypergeometricMoments	access:protected
+xmax	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ Minimum and maximum x$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+xmax	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ minimum and maximum of x$/;"	m	class:CFishersNCHypergeometric	access:protected
+xmin	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ Minimum and maximum x$/;"	m	class:CWalleniusNCHypergeometric	access:protected
+xmin	rand/stocc.h	/^   int32_t xmin, xmax;                                     \/\/ minimum and maximum of x$/;"	m	class:CFishersNCHypergeometric	access:protected

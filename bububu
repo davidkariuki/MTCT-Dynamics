@@ -1,0 +1,77 @@
+
+infected 15-49: 2291
+susceptible 15-49: 18132
+prevalence: 11.2177%
+susceptibles: 47662 infected: 2291
+
+removed: 0
+Year: 1
+
+infected 15-49: 2318
+susceptible 15-49: 17911
+prevalence: 11.4588%
+susceptibles: 47797 infected: 2322 removed: 456
+
+Year: 2
+
+infected 15-49: 2418
+susceptible 15-49: 16911
+prevalence: 12.5097%
+susceptibles: 47967 infected: 2431 removed: 2777
+
+Year: 3
+
+infected 15-49: 2465
+susceptible 15-49: 16193
+prevalence: 13.2115%
+susceptibles: 48505 infected: 2489 removed: 4597
+
+Year: 4
+
+infected 15-49: 2478
+susceptible 15-49: 15518
+prevalence: 13.7697%
+susceptibles: 48919 infected: 2512 removed: 6462
+
+Year: 5
+
+infected 15-49: 2517
+susceptible 15-49: 14903
+prevalence: 14.4489%
+susceptibles: 49304 infected: 2563 removed: 8227
+
+Year: 6
+
+infected 15-49: 2525
+susceptible 15-49: 14285
+prevalence: 15.0208%
+susceptibles: 49723 infected: 2573 removed: 10023
+
+Year: 7
+
+infected 15-49: 2567
+susceptible 15-49: 13640
+prevalence: 15.8388%
+susceptibles: 49840 infected: 2617 removed: 11922
+
+Year: 8
+
+infected 15-49: 2600
+susceptible 15-49: 13031
+prevalence: 16.6336%
+susceptibles: 49871 infected: 2657 removed: 13801
+
+Year: 9
+
+infected 15-49: 2605
+susceptible 15-49: 12455
+prevalence: 17.2975%
+susceptibles: 49745 infected: 2668 removed: 15752
+
+Year: 10
+
+infected 15-49: 2618
+susceptible 15-49: 11880
+prevalence: 18.0577%
+susceptibles: 49570 infected: 2684 removed: 17706
+
