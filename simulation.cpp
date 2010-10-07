@@ -11,7 +11,7 @@
 
 /*-----------------------------------------------------------------------------
  * TODO: Implement:
-  	-Resistance
+  	-Resistance mutation tracking
     -Arv dynamics / failure
 	-prediction of mutations
     -how does viral load respond to treatment based on effectiveness
@@ -73,11 +73,14 @@ int main(int argc, char* argv[])
     int year = 0;
     // run simulation
     
+    ofstream out("testoutput.txt");
+
     for(int i = 0; i < NUM_ITERATIONS; ++i) // 3 month intervals
     {
         update_births(susceptible, infected, br_data, s);
         compute_infected(susceptible, infected, s);
         compute_removed(susceptible, infected, removed, s);
+        output_population_statistics(susceptible, infected, removed, out);
 
         if(i  % 4 == 0)
         {
@@ -252,11 +255,14 @@ void update_births(list<person> &susceptible, list<person> &infected, list<birth
            person p;
            set_sex(p, s);
            p.age = 0;
-           susceptible.push_front(p); // TODO: ID? Other things to set?
+
+           if(s.Binomial(1, 0.15)) // TODO: source this - Malawi MTCT Rates
+               infected.push_back(p); 
+           else
+               susceptible.push_front(p);
         }
     }
 }
-
 
 
 /* 
@@ -287,6 +293,8 @@ void compute_infected(list<person> &susceptible, list<person> &infected, Stochas
         }
     }
 }
+
+
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -331,7 +339,6 @@ void compute_removed(list<person> &susceptible, list<person> &infected, list<per
             iterator_moved = true;
         }
     }
-
 }
 
 

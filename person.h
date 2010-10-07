@@ -47,7 +47,7 @@ class person
             return cout;
         }
 
-        int ID, infection_date;
+        unsigned int ID, infection_date, clinical_stage;
 		float age, cd4_count, cholesterol;
 		char sex;
 		string risk_group; // IDU, MSM, blood etc
@@ -65,6 +65,7 @@ person::person()
 {
     status = "susceptible";
     cd4_count = DEFAULT_CD4_COUNT;
+    clinical_stage = 1;
 }
 
 // print stats helper

@@ -82,6 +82,7 @@ bool inline  verify_sex_age(person &p, char sex, float lower, float higher)
  * ===  FUNCTION  ======================================================================
  *         Name:  evaluate_birth_probability
  *  Description:  calculates the probability of birth, returns true or false
+ *                NOTE: infected pregnancy rate reduced by 17% (Desgrees du Lou et al. 1999). 
  * =====================================================================================
  */
 bool evaluate_birth_probability(person &p, list<birth_data> &data, StochasticLib1 &s)
@@ -91,15 +92,28 @@ bool evaluate_birth_probability(person &p, list<birth_data> &data, StochasticLib
     {
         if(verify_sex_age(p, 'F', itr->lower, itr->higher))
         {
-            if(s.Binomial(1, BIRTH_PROBABILITY(itr->fraction)))
-                return true;
-            else
-                continue;
+            if(p.status == "susceptible")
+            {
+                if(s.Binomial(1, BIRTH_PROBABILITY(itr->fraction)))
+                    return true;
+                else
+                    continue;
+            }
+            else // person is infected
+            {
+                if(s.Binomial(1, 0.83 * BIRTH_PROBABILITY(itr->fraction))) // see note 
+                    return true;
+                else
+                    continue;
+            }
         }
     }                
 
     return false;
 }
+
+
+
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  validate_flags

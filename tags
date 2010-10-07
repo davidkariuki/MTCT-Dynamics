@@ -236,7 +236,7 @@ FishersNCHyp	rand/stocc.h	/^   int32_t FishersNCHyp (int32_t n, int32_t m, int32
 FishersNCHypInversion	rand/stocc.h	/^   int32_t FishersNCHypInversion (int32_t n, int32_t m, int32_t N, double odds); \/\/ FishersNCHyp by inversion$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
 FishersNCHypRatioOfUnifoms	rand/stocc.h	/^   int32_t FishersNCHypRatioOfUnifoms (int32_t n, int32_t m, int32_t N, double odds); \/\/ FishersNCHyp by ratio-of-uniforms$/;"	p	class:StochasticLib3	access:protected	signature:(int32_t n, int32_t m, int32_t N, double odds)
 FloorLog2	rand/stocc.h	/^int32_t FloorLog2(float x);            \/\/ floor(log2(x)) for x > 0 (wnchyppr.cpp)$/;"	p	signature:(float x)
-HEADERS	Makefile	/^HEADERS = deaths.h transmission.h person.h arvs.h virus.h rand\/randomc.h rand\/stocc.h utils.h inputs.h$/;"	m
+HEADERS	Makefile	/^HEADERS = outputs.h deaths.h transmission.h person.h arvs.h virus.h rand\/randomc.h rand\/stocc.h utils.h inputs.h$/;"	m
 HypInversionMod	rand/stoc1.cpp	/^int32_t StochasticLib1::HypInversionMod (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
 HypInversionMod	rand/stocc.h	/^   int32_t HypInversionMod (int32_t n, int32_t M, int32_t N);  \/\/ hypergeometric by inversion searching from mode$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t n, int32_t M, int32_t N)
 HypPatchwork	rand/stocc.h	/^   int32_t HypPatchwork (int32_t n, int32_t M, int32_t N); \/\/ hypergeometric by patchwork rejection$/;"	p	class:StochasticLib2	access:protected	signature:(int32_t n, int32_t M, int32_t N)
@@ -269,7 +269,7 @@ Hyp_r5	rand/stocc.h	/^      Hyp_r1, Hyp_r2, Hyp_r4, Hyp_r5, $/;"	m	class:Stochas
 Hypergeometric	rand/stoc1.cpp	/^int32_t StochasticLib1::Hypergeometric (int32_t n, int32_t m, int32_t N) {$/;"	f	class:StochasticLib1	signature:(int32_t n, int32_t m, int32_t N)
 Hypergeometric	rand/stocc.h	/^   int32_t Hypergeometric (int32_t n, int32_t m, int32_t N); \/\/ Hypergeometric distribution$/;"	p	class:StochasticLib1	access:public	signature:(int32_t n, int32_t m, int32_t N)
 Hypergeometric	rand/stocc.h	/^   int32_t Hypergeometric(int32_t n, int32_t M, int32_t N);\/\/ Hypergeometric distribution$/;"	p	class:StochasticLib2	access:public	signature:(int32_t n, int32_t M, int32_t N)
-ID	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+ID	person.h	/^        unsigned int ID, infection_date, clinical_stage;$/;"	m	class:person	access:public
 INITIAL_AGE	person.h	/^#define INITIAL_AGE /;"	d
 INT64_SUPPORTED	rand/randomc.h	/^  #define INT64_SUPPORTED /;"	d
 INTERCOURSE_FREQUENCY	transmission.h	/^#define INTERCOURSE_FREQUENCY /;"	d
@@ -640,18 +640,21 @@ birth_data::birth_data	utils.h	/^        explicit birth_data(int l, int h, float
 birth_data::fraction	utils.h	/^        float fraction; \/\/ percentages$/;"	m	struct:birth_data	access:public
 birth_data::higher	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
 birth_data::lower	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
-calc_inf_death_risk	deaths.h	/^void calc_inf_death_risk(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
+calc_6month_death_risk	deaths.h	/^int calc_6month_death_risk(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
 cd4_count	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
 check_bounds	utils.h	/^void inline check_bounds(float number, float lower, float higher)$/;"	f	signature:(float number, float lower, float higher)
 cholesterol	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+clinical_stage	person.h	/^        unsigned int ID, infection_date, clinical_stage;$/;"	m	class:person	access:public
 cmp	person.h	/^        struct cmp $/;"	s	class:person	access:public
 colors	rand/stocc.h	/^   int colors;                                             \/\/ number of different colors$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
 colors	rand/stocc.h	/^   int colors;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
 compute_infected	simulation.cpp	/^void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s)$/;"	f	signature:(list<person> &susceptible, list<person> &infected, StochasticLib1 &s)
 compute_infected	simulation.cpp	/^void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s);$/;"	p	file:	signature:(list<person> &susceptible, list<person> &infected, StochasticLib1 &s)
+compute_removed	simulation.cpp	/^void compute_removed(list<person> &susceptible, list<person> &infected, list<person> &removed, StochasticLib1 &s)$/;"	f	signature:(list<person> &susceptible, list<person> &infected, list<person> &removed, StochasticLib1 &s)
+compute_removed	simulation.cpp	/^void compute_removed(list<person> &susceptible, list<person> &infected, list<person> &removed, StochasticLib1 &s);$/;"	p	file:	signature:(list<person> &susceptible, list<person> &infected, list<person> &removed, StochasticLib1 &s)
 cur_regiment	person.h	/^		multiset<arvs, cmp> cur_regiment; $/;"	m	class:person	access:public
 determine_resistance	simulation.cpp	/^void determine_resistance(person &p) {$/;"	f	signature:(person &p)
-evaluate_birth	utils.h	/^bool evaluate_birth(person &p, list<birth_data> &data, StochasticLib1 &s)$/;"	f	signature:(person &p, list<birth_data> &data, StochasticLib1 &s)
+evaluate_birth_probability	utils.h	/^bool evaluate_birth_probability(person &p, list<birth_data> &data, StochasticLib1 &s)$/;"	f	signature:(person &p, list<birth_data> &data, StochasticLib1 &s)
 fc_lnpk	rand/stoc1.cpp	/^double StochasticLib1::fc_lnpk(int32_t k, int32_t L, int32_t m, int32_t n) {$/;"	f	class:StochasticLib1	signature:(int32_t k, int32_t L, int32_t m, int32_t n)
 fc_lnpk	rand/stocc.h	/^   static double fc_lnpk(int32_t k, int32_t N_Mn, int32_t M, int32_t n); \/\/ used by Hypergeometric$/;"	p	class:StochasticLib1	access:protected	signature:(int32_t k, int32_t N_Mn, int32_t M, int32_t n)
 female_f	inputs.h	/^        float male_f, female_f; \/\/ percentages$/;"	m	struct:prevalence_data	access:public
@@ -670,6 +673,7 @@ fnc_o_last	rand/stocc.h	/^   double fnc_o_last;$/;"	m	class:StochasticLib3	acces
 fnc_scale	rand/stocc.h	/^   double fnc_f0, fnc_scale;$/;"	m	class:StochasticLib3	access:protected
 fraction	utils.h	/^        float fraction; \/\/ percentages$/;"	m	struct:birth_data	access:public
 higher	inputs.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:prevalence_data	access:public
+higher	utils.h	/^        float lower, higher;$/;"	m	struct:within_age_range	access:public
 higher	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
 hiv	person.h	/^		virus hiv; \/\/ TODO: is this needed?$/;"	m	class:person	access:public
 hyp_N_last	rand/stocc.h	/^   int32_t  hyp_n_last, hyp_m_last, hyp_N_last;            \/\/ Last values of parameters$/;"	m	class:StochasticLib1	access:protected
@@ -685,10 +689,8 @@ import_birth_data	inputs.h	/^void import_birth_data(list<birth_data> &data){$/;"
 import_population_data	inputs.h	/^void import_population_data(list<person> &data, CRandomMersenne &r)$/;"	f	signature:(list<person> &data, CRandomMersenne &r)
 import_prevalence_data	inputs.h	/^void import_prevalence_data(list<prevalence_data> &data){$/;"	f	signature:(list<prevalence_data> &data)
 in_use	arvs.h	/^		bool in_use;$/;"	m	class:arvs	access:public
-infect	transmission.h	/^bool infect(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
-infection_date	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+infection_date	person.h	/^        unsigned int ID, infection_date, clinical_stage;$/;"	m	class:person	access:public
 infection_probability	transmission.h	/^float infection_probability(person &p)$/;"	f	signature:(person &p)
-infectious_age	utils.h	/^bool inline infectious_age(person &elem)$/;"	f	signature:(person &elem)
 init_infect	simulation.cpp	/^bool init_infect(person &, prevalence_data &, StochasticLib1 &); $/;"	p	file:	signature:(person &, prevalence_data &, StochasticLib1 &)
 init_infect	simulation.cpp	/^bool init_infect(person &p, prevalence_data &pr, StochasticLib1 &s) $/;"	f	signature:(person &p, prevalence_data &pr, StochasticLib1 &s)
 initialize_population	simulation.cpp	/^void initialize_population(list<person> &,list<person> &, list<prevalence_data> &, StochasticLib1 &, CRandomMersenne &);$/;"	p	file:	signature:(list<person> &,list<person> &, list<prevalence_data> &, StochasticLib1 &, CRandomMersenne &)
@@ -714,6 +716,7 @@ logodds	rand/stocc.h	/^   double logodds[MAXCOLORS];                            
 loop	rand/stocc.h	/^   double loop(int32_t n, int c);                          \/\/ recursive loops used by SumOfAll$/;"	p	class:CMultiFishersNCHypergeometric	access:protected	signature:(int32_t n, int c)
 loop	rand/stocc.h	/^   double loop(int32_t n, int c);                          \/\/ recursive loops$/;"	p	class:CMultiWalleniusNCHypergeometricMoments	access:protected	signature:(int32_t n, int c)
 lower	inputs.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:prevalence_data	access:public
+lower	utils.h	/^        float lower, higher;$/;"	m	struct:within_age_range	access:public
 lower	utils.h	/^        int lower, higher; \/\/ age brackets$/;"	m	struct:birth_data	access:public
 m	rand/stocc.h	/^   int32_t * m;                                            \/\/ items of each color in urn$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
 m	rand/stocc.h	/^   int32_t * m;$/;"	m	class:CMultiFishersNCHypergeometric	access:protected
@@ -752,20 +755,23 @@ omega	rand/stocc.h	/^   double * omega;                                         
 omega	rand/stocc.h	/^   double omega;                                           \/\/ Odds$/;"	m	class:CWalleniusNCHypergeometric	access:protected
 operator ()	person.h	/^			bool operator () (const arvs& left, const arvs& right) const $/;"	f	struct:person::cmp	access:public	signature:(const arvs& left, const arvs& right) const
 operator ()	person.h	/^	public: void operator()(arvs x) { x.print_data(); }$/;"	f	struct:print_arv	access:public	signature:(arvs x)
+operator ()	utils.h	/^        bool operator()(person &elem) $/;"	f	struct:within_age_range	access:public	signature:(person &elem)
 operator <<	person.h	/^        friend ostream &operator << (ostream &cout, const person &elem)$/;"	f	class:person	access:friend	signature:(ostream &cout, const person &elem)
-output_prevalence	outputs.h	/^void output_prevalence(StochasticLib1 &s, list<person> &susceptible, list<person> &infected)$/;"	f	signature:(StochasticLib1 &s, list<person> &susceptible, list<person> &infected)
+output_age_specific_prevalence	outputs.h	/^void output_age_specific_prevalence(StochasticLib1 &s, list<person> &susceptible, list<person> &infected)$/;"	f	signature:(StochasticLib1 &s, list<person> &susceptible, list<person> &infected)
+output_population_statistics	outputs.h	/^void output_population_statistics(list<person> &S, list<person> &I, list<person> &R, ofstream &output)$/;"	f	signature:(list<person> &S, list<person> &I, list<person> &R, ofstream &output)
 person	person.h	/^		explicit person();$/;"	p	class:person	access:public	signature:()
 person	person.h	/^class person $/;"	c
 person	person.h	/^person::person()$/;"	f	class:person	signature:()
-person::ID	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+person::ID	person.h	/^        unsigned int ID, infection_date, clinical_stage;$/;"	m	class:person	access:public
 person::age	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
 person::cd4_count	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
 person::cholesterol	person.h	/^		float age, cd4_count, cholesterol;$/;"	m	class:person	access:public
+person::clinical_stage	person.h	/^        unsigned int ID, infection_date, clinical_stage;$/;"	m	class:person	access:public
 person::cmp	person.h	/^        struct cmp $/;"	s	class:person	access:public
 person::cmp::operator ()	person.h	/^			bool operator () (const arvs& left, const arvs& right) const $/;"	f	struct:person::cmp	access:public	signature:(const arvs& left, const arvs& right) const
 person::cur_regiment	person.h	/^		multiset<arvs, cmp> cur_regiment; $/;"	m	class:person	access:public
 person::hiv	person.h	/^		virus hiv; \/\/ TODO: is this needed?$/;"	m	class:person	access:public
-person::infection_date	person.h	/^        int ID, infection_date;$/;"	m	class:person	access:public
+person::infection_date	person.h	/^        unsigned int ID, infection_date, clinical_stage;$/;"	m	class:person	access:public
 person::operator <<	person.h	/^        friend ostream &operator << (ostream &cout, const person &elem)$/;"	f	class:person	access:friend	signature:(ostream &cout, const person &elem)
 person::person	person.h	/^		explicit person();$/;"	p	class:person	access:public	signature:()
 person::person	person.h	/^person::person()$/;"	f	class:person	signature:()
@@ -780,6 +786,8 @@ person::stop_arv	person.h	/^		void stop_arv(string, string);$/;"	p	class:person	
 person::stop_arv	person.h	/^void person::stop_arv(string arv, string reason)$/;"	f	class:person	signature:(string arv, string reason)
 person::viral_load	person.h	/^        float viral_load; \/\/ TODO: this has overlap in virus.h also, log$/;"	m	class:person	access:public
 person::virus_type	person.h	/^        string virus_type; \/\/ TODO: same as viral_load$/;"	m	class:person	access:public
+person_infected	transmission.h	/^bool person_infected(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
+person_removed	deaths.h	/^bool person_removed(person &p, StochasticLib1 &s)$/;"	f	signature:(person &p, StochasticLib1 &s)
 phi2d	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
 phi2d	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHypergeometric	access:protected
 pois_L_last	rand/stocc.h	/^   double pois_L_last;                                     \/\/ previous value of L$/;"	m	class:StochasticLib1	access:protected
@@ -815,7 +823,6 @@ probability	rand/stocc.h	/^   double probability(int32_t x);                    
 probabilityRatio	rand/stocc.h	/^   double probabilityRatio(int32_t x, int32_t x0);         \/\/ calculate probability f(x)\/f(x0)$/;"	p	class:CFishersNCHypergeometric	access:public	signature:(int32_t x, int32_t x0)
 process_flags	simulation.cpp	/^int process_flags(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
 process_flags	simulation.cpp	/^int process_flags(int argc, char* argv[]);$/;"	p	file:	signature:(int argc, char* argv[])
-process_susceptible_deaths	deaths.h	/^void process_susceptible_deaths()$/;"	f	signature:()
 process_virus_type	simulation.cpp	/^void process_virus_type(person &, StochasticLib1 &);$/;"	p	file:	signature:(person &, StochasticLib1 &)
 process_virus_type	simulation.cpp	/^void process_virus_type(person &p, StochasticLib1 &sto) $/;"	f	signature:(person &p, StochasticLib1 &sto)
 r	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CMultiWalleniusNCHypergeometric	access:protected
@@ -890,6 +897,12 @@ w	rand/stocc.h	/^   double r, rd, w, wr, E, phi2d;$/;"	m	class:CWalleniusNCHyper
 wall_tablen	rand/stocc.h	/^   int32_t wall_tablen;                                    \/\/ length of table$/;"	m	class:StochasticLib3	access:protected
 wall_x1	rand/stocc.h	/^   int32_t wall_x1;                                        \/\/ lower x limit for table$/;"	m	class:StochasticLib3	access:protected
 wall_ytable	rand/stocc.h	/^   double wall_ytable[WALL_TABLELENGTH];                   \/\/ table of probability values$/;"	m	class:StochasticLib3	access:protected
+within_age_range	utils.h	/^        explicit within_age_range(int l, int h)$/;"	f	struct:within_age_range	access:public	signature:(int l, int h)
+within_age_range	utils.h	/^struct within_age_range $/;"	s
+within_age_range::higher	utils.h	/^        float lower, higher;$/;"	m	struct:within_age_range	access:public
+within_age_range::lower	utils.h	/^        float lower, higher;$/;"	m	struct:within_age_range	access:public
+within_age_range::operator ()	utils.h	/^        bool operator()(person &elem) $/;"	f	struct:within_age_range	access:public	signature:(person &elem)
+within_age_range::within_age_range	utils.h	/^        explicit within_age_range(int l, int h)$/;"	f	struct:within_age_range	access:public	signature:(int l, int h)
 wnc_N_last	rand/stocc.h	/^   int32_t wnc_n_last, wnc_m_last, wnc_N_last;             \/\/ previous parameters$/;"	m	class:StochasticLib3	access:protected
 wnc_a	rand/stocc.h	/^   double wnc_a;                                           \/\/ hat center$/;"	m	class:StochasticLib3	access:protected
 wnc_bound1	rand/stocc.h	/^   int32_t wnc_bound1, wnc_bound2;                         \/\/ lower and upper bound$/;"	m	class:StochasticLib3	access:protected
