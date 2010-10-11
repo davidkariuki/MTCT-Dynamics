@@ -1,25 +1,77 @@
-CC = g++
-CFLAGS = -Wall -g -O0 
-LDFLAGS = 
-HEADERS = outputs.h deaths.h transmission.h person.h arvs.h virus.h rand/randomc.h rand/stocc.h utils.h inputs.h
-SOURCES = simulation.cpp rand/mersenne.cpp rand/stoc1.cpp rand/userintf.cpp
-OBJECTS = $(SOURCES:.c=.o)
-LIBRARIES =  
-TARGET = sim
+# Define executable name
+BIN = sim 
 
-default: $(TARGET)
 
-$(TARGET) : $(OBJECTS) Makefile.dependencies
-	$(CC) $(CFLAGS) -o $@ $(OBJECTS) $(LDFLAGS) $(LIBRARIES)
+# Define source files
+SRCS = simulation.cpp mersenne.cpp stoc1.cpp userintf.cpp
 
-Makefile.dependencies:: $(SOURCES) $(HEADERS)
-	$(CC) $(CFLAGS) -MM $(SOURCES) > Makefile.dependencies
+# Define header file paths
+INCPATH = headers/*.h
 
--include Makefile.dependencies
+# Define the -L library path(s)
+LDFLAGS =
 
-# The phony target "clean" that is used to remove all compiled object files.
+# Define the -l library name(s)
+LIBS =
 
-.PHONY: clean
+# Only in special cases should anything be edited below this line
+#
+OBJS      = $(SRCS:.cpp=.o)
+CXXFLAGS  = -Wall -g -O0
+DEP_FILE  = .depend
 
+
+.PHONY = all clean distclean
+
+
+# Main entry point
+#
+all: depend $(BIN)
+
+
+# For linking object file(s) to produce the executable
+#
+$(BIN): $(OBJS)
+	@echo Linking $@
+	@$(CXX) $^ $(LDFLAGS) $(LIBS) -o $@
+
+
+# For compiling source file(s)
+#
+.cpp.o:
+	@echo Compiling $<
+	@$(CXX) -c $(CXXFLAGS) $(INCPATH) $<
+
+
+# For cleaning up the project
+#
 clean:
-	@rm -fr $(TARGET) Makefile.dependencies
+	$(RM) $(OBJS)
+
+distclean: clean
+	$(RM) $(BIN)
+	$(RM) $(DEP_FILE)
+
+
+# For determining source file dependencies
+#
+depend: $(DEP_FILE)
+	@touch $(DEP_FILE)
+
+$(DEP_FILE):
+	@echo Generating dependencies in $@
+	@-$(CXX) -E -MM $(CXXFLAGS) $(INCPATH) $(SRCS) >> $(DEP_FILE)
+
+
+
+
+
+
+
+
+ifeq (,$(findstring clean,$(MAKECMDGOALS)))
+ifeq (,$(findstring distclean,$(MAKECMDGOALS)))
+-include $(DEP_FILE)
+endif
+endif
+

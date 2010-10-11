@@ -19,12 +19,12 @@
  *-----------------------------------------------------------------------------*/
 
 #include <iterator>
-#include "inputs.h"
-#include "outputs.h"
-#include "person.h"
-#include "utils.h"
-#include "transmission.h"
-#include "deaths.h"
+#include "headers/inputs.h"
+#include "headers/outputs.h"
+#include "headers/person.h"
+#include "headers/utils.h"
+#include "headers/transmission.h"
+#include "headers/deaths.h"
 
 using namespace std;
 
@@ -67,13 +67,15 @@ int main(int argc, char* argv[])
 	initialize_population(susceptible, infected, pr_data, s, r);
    
     print_prevalence(susceptible, infected);
-    cout << "susceptibles: " << susceptible.size() << " infected: " << infected.size() << endl << endl;
-    cout << "removed: " << removed.size() << endl;
+
+    //cout << "removed: " << removed.size() << endl;
 
     int year = 0;
     // run simulation
     
     ofstream out("testoutput.txt");
+
+    int total = 0, prev_total = susceptible.size() + infected.size();
 
     for(int i = 0; i < NUM_ITERATIONS; ++i) // 3 month intervals
     {
@@ -81,15 +83,20 @@ int main(int argc, char* argv[])
         compute_infected(susceptible, infected, s);
         compute_removed(susceptible, infected, removed, s);
         output_population_statistics(susceptible, infected, removed, out);
-
+        
         if(i  % 4 == 0)
         {
             ++year;
             cout << "Year: " << year << endl;
+            total = susceptible.size() + infected.size();
+            float d_p = 100.0 * (prev_total - total) / prev_total;
+            prev_total = total;
+            cout << "change (TOTAL population): " << d_p << "%"<< endl;
             output_age_specific_prevalence(s, susceptible, infected); // writes to output
             print_prevalence(susceptible, infected);
-            cout << "susceptibles: " << susceptible.size() << " infected: " 
-                << infected.size() << " removed: " << removed.size() << endl << endl;
+            cout << endl;
+            //cout << "susceptibles: " << susceptible.size() << " infected: " 
+             //   << infected.size() << " removed: " << removed.size() << endl << endl;
         }
 	}
     return 0;
@@ -191,6 +198,7 @@ bool init_infect(person &p, prevalence_data &pr, StochasticLib1 &s)
            if(s.Binomial(1, pr.male_f))
            {
                p.status = "infected";
+               p.viral_load = 15000.0;
                return true;
            }
            else return false;
@@ -200,6 +208,7 @@ bool init_infect(person &p, prevalence_data &pr, StochasticLib1 &s)
            if(s.Binomial(1, pr.female_f))
             {
                p.status = "infected";
+               p.viral_load = 15000.0;
                return true;
            }
            else return false;

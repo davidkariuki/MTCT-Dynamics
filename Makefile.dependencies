@@ -1,5 +1,0 @@
-simulation.o: simulation.cpp inputs.h person.h arvs.h virus.h \
-  rand/stocc.h rand/randomc.h utils.h outputs.h transmission.h deaths.h
-mersenne.o: rand/mersenne.cpp rand/randomc.h
-stoc1.o: rand/stoc1.cpp rand/stocc.h rand/randomc.h
-userintf.o: rand/userintf.cpp
