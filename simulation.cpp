@@ -18,20 +18,21 @@
     -if viral load changes, how does cd4 respond
  *-----------------------------------------------------------------------------*/
 
-#include <iterator>
+#include "headers/utils.h"
 #include "headers/inputs.h"
 #include "headers/outputs.h"
 #include "headers/person.h"
-#include "headers/utils.h"
 #include "headers/transmission.h"
 #include "headers/deaths.h"
+#include "headers/births.h"
 
-using namespace std;
 
 /*-----------------------------------------------------------------------------
  *  Function Definitions 
  *-----------------------------------------------------------------------------*/
 void set_age(CRandomMersenne &, person &, int, int);
+void update_age(list<person> &S, list<person> &I);
+void age_updater(person &p);
 void initialize_population(list<person> &,list<person> &, list<prevalence_data> &, StochasticLib1 &, CRandomMersenne &);
 void update_population(list<person> &infected, list<person> &susceptible, StochasticLib1& sto);
 void update_viral_load(person &, StochasticLib1 &);
@@ -40,10 +41,8 @@ void process_virus_type(person &, StochasticLib1 &);
 void population_stats(list<person> &, int &);
 int process_flags(int argc, char* argv[]);
 bool init_infect(person &, prevalence_data &, StochasticLib1 &); 
-void update_births(list<person> &, list<person> &, list<birth_data> &, StochasticLib1 &);
 int process_flags(int argc, char* argv[]);
 void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s);
-void compute_removed(list<person> &susceptible, list<person> &infected, list<person> &removed, StochasticLib1 &s);
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  main
@@ -60,20 +59,23 @@ int main(int argc, char* argv[])
     list<person> susceptible;
     list<prevalence_data> pr_data;	
     list<birth_data> br_data;
-
+    list<death_data> death_data;
+    ofstream prev_out("outputs/prevalence.txt", ios::out), out("outputs/population.txt", ios::out);
     //set up data
     import_prevalence_data(pr_data);
     import_birth_data(br_data);
+    import_death_data(death_data);
 	initialize_population(susceptible, infected, pr_data, s, r);
-   
-    print_prevalence(susceptible, infected);
 
+    //print prleminary (day 0) stats
+    cout << "time 0: ";
+    print_prevalence(susceptible, infected, prev_out);
+    
     //cout << "removed: " << removed.size() << endl;
 
     int year = 0;
     // run simulation
     
-    ofstream out("testoutput.txt");
 
     int total = 0, prev_total = susceptible.size() + infected.size();
 
@@ -81,24 +83,31 @@ int main(int argc, char* argv[])
     {
         update_births(susceptible, infected, br_data, s);
         compute_infected(susceptible, infected, s);
-        compute_removed(susceptible, infected, removed, s);
+
         output_population_statistics(susceptible, infected, removed, out);
         
+
         if(i  % 4 == 0)
         {
+            map<string, int> S, I, R;
             ++year;
-            cout << "Year: " << year << endl;
+            update_age(susceptible, infected);
+            compute_deaths(susceptible, infected, removed, death_data, s);
+            cout << "Year: " << year << "  \t";
             total = susceptible.size() + infected.size();
-            float d_p = 100.0 * (prev_total - total) / prev_total;
+            float d_p = 100.0 * (total - prev_total) / prev_total;
             prev_total = total;
-            cout << "change (TOTAL population): " << d_p << "%"<< endl;
-            output_age_specific_prevalence(s, susceptible, infected); // writes to output
-            print_prevalence(susceptible, infected);
-            cout << endl;
+            cout << "change (TOTAL population): " << d_p <<  "% (" << total << ")" << "\t";
+            // TODO: this outputs/couts
+            print_prevalence(susceptible, infected, prev_out);
             //cout << "susceptibles: " << susceptible.size() << " infected: " 
              //   << infected.size() << " removed: " << removed.size() << endl << endl;
+            print_population_changes(susceptible, infected, removed, S, I, R);
         }
 	}
+
+    out.close();
+    prev_out.close();
     return 0;
 }
 
@@ -159,25 +168,25 @@ void initialize_population(list<person> &susceptible, list<person> &infected, li
     import_population_data(susceptible, r);
 
     // infect males and females based on prevalence datai
-    bool moved = false;
-    for(itr = susceptible.begin(); itr != susceptible.end(); ++itr)
+    bool infctd;
+    for(itr = susceptible.begin(); itr != susceptible.end(); )
     {
-         if(moved)
-        {
-            --itr;
-            moved = false;
-        }
         
         for(pd_itr = pr_data.begin(); pd_itr != pr_data.end(); ++pd_itr)
         {
-           if(init_infect(*itr, *pd_itr, s))
+           infctd = init_infect(*itr, *pd_itr, s);
+           
+           if(infctd)
            {
                infected.push_back(*itr);
                itr = susceptible.erase(itr); 
-               moved = true;
-               continue;
+               break;
            }               
        }
+
+        if(!infctd)
+            ++itr;
+
    }
 }
 
@@ -198,7 +207,7 @@ bool init_infect(person &p, prevalence_data &pr, StochasticLib1 &s)
            if(s.Binomial(1, pr.male_f))
            {
                p.status = "infected";
-               p.viral_load = 15000.0;
+               p.viral_load = s.Normal(5, 1);
                return true;
            }
            else return false;
@@ -208,7 +217,7 @@ bool init_infect(person &p, prevalence_data &pr, StochasticLib1 &s)
            if(s.Binomial(1, pr.female_f))
             {
                p.status = "infected";
-               p.viral_load = 15000.0;
+               p.viral_load = s.Normal(5,1); 
                return true;
            }
            else return false;
@@ -233,121 +242,28 @@ void update_population(list<person> &infected, list<person> &susceptible, Stocha
      
 }
 
-   
+
 /* 
  * ===  FUNCTION  ======================================================================
- *         Name:  update_births
- *  Description:  adds children based on birth_probability defined in utils.h
- *                TODO: implement infecteds MTC
+ *         Name:  age_updater
+ *  Description:  helper function for update_age
  * =====================================================================================
  */
-void update_births(list<person> &susceptible, list<person> &infected, list<birth_data> &data, StochasticLib1& s)
+void age_updater(person &p)
 {
-    list<person>::iterator itr;
-
-    for(itr = susceptible.begin(); itr != susceptible.end(); ++itr)
-{
-        if(evaluate_birth_probability(*itr, data, s)) 
-        {
-           person p;
-           set_sex(p, s);
-           p.age = 0;
-           susceptible.push_front(p); // TODO: ID? Other things to set?
-           
-        }
-    }
-    
-    for(itr = infected.begin(); itr != infected.end(); ++itr)
-    {
-        if(evaluate_birth_probability(*itr, data, s)) 
-        {
-           person p;
-           set_sex(p, s);
-           p.age = 0;
-
-           if(s.Binomial(1, 0.15)) // TODO: source this - Malawi MTCT Rates
-               infected.push_back(p); 
-           else
-               susceptible.push_front(p);
-        }
-    }
+    ++(p.age);
 }
 
-
 /* 
  * ===  FUNCTION  ======================================================================
- *         Name:  compute_infected
- *  Description:  goes over the susceptible population and infects based on infection
- *                probability by number of coital acts
+ *         Name:  update_age
+ *  Description:  updates population ages
  * =====================================================================================
  */
-void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s)
+void update_age(list<person> &S, list<person> &I)
 {
-    list<person>::iterator itr;
-    bool moved = false;
-
-    for(itr = susceptible.begin(); itr != susceptible.end(); ++itr)
-    {
-        if(moved)
-        {
-            --itr;
-            moved = false;
-        }
-       
-        if(person_infected(*itr, s))
-        {
-            infected.push_back(*itr);
-            itr = susceptible.erase(itr); 
-            moved = true;
-        }
-    }
-}
-
-
-
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  compute_removed
- *  Description:  removes from susceptible and infected popoulations based on mortality
- *                data TODO: finish this
- * =====================================================================================
- */
-void compute_removed(list<person> &susceptible, list<person> &infected, list<person> &removed, StochasticLib1 &s)
-{
-    list<person>::iterator itr;
-    bool  iterator_moved = false;
-
-    for(itr = susceptible.begin(); itr != susceptible.end(); ++itr)
-    {
-        if(iterator_moved) // deletion moves iterator to next element, prevent skipping
-        {
-            --itr;
-            iterator_moved = false;
-        }
-       
-        if(person_removed(*itr, s) == true)
-        {
-            removed.push_back(*itr);
-            itr = susceptible.erase(itr); 
-            iterator_moved = true;
-        }
-    }
-
-    for(itr = infected.begin(); itr != infected.end(); ++itr)
-    {
-        if(iterator_moved) // deletion moves iterator to next element, prevent skipping
-        {
-            --itr;
-            iterator_moved = false;
-        }
-       
-        if(person_removed(*itr, s) == true)
-        {
-            removed.push_back(*itr);
-            itr = infected.erase(itr); 
-            iterator_moved = true;
-        }
-    }
+    for_each(S.begin(), S.end(), age_updater);
+    for_each(I.begin(), I.end(), age_updater);
 }
 
 

@@ -12,16 +12,12 @@
 #ifndef __inputs_h__
 #define __inputs_h__
 
-#include <list>
-#include <fstream> 
-#include <sstream>
-#include "person.h"
 #include "utils.h"
 
 #define POPULATION_DATA "data/population_data.csv" // contains age groups and fractions of men and women
 #define PREVALENCE_DATA "data/prevalence_data.csv" // contains age groups and fractions of men and women
 #define BIRTH_DATA "data/birth_data.csv"
-
+#define DEATH_DATA "data/death_data.csv"
 
 /*-----------------------------------------------------------------------------
  *  stores prevalence data : TODO: templetize to use with other data if necessary
@@ -85,6 +81,7 @@ void import_population_data(list<person> &data, CRandomMersenne &r)
         }
     }
 
+
     input.close();
 }
 
@@ -120,6 +117,7 @@ void import_prevalence_data(list<prevalence_data> &data){
 }
 
 
+
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  import_birth_data
@@ -147,6 +145,39 @@ void import_birth_data(list<birth_data> &data){
         data.push_back(b); 
     }
 
+    input.close();
+}
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  import_death_data
+ *  Description:  imports age-specific death probabilities from death_data.csv
+ * =====================================================================================
+ */
+void import_death_data(list<death_data> &data){
+    ifstream input(DEATH_DATA, ios::in);
+    if(input.fail()) 
+    {
+        cout << "Input error: could not open" << DEATH_DATA << endl;
+        exit(-1);
+    }
+   
+    int lower, higher; // age brackets
+    float nqx_m, nqx_f; // gender-specific death probability 
+
+    string line;
+
+    while(getline(input, line))
+    {
+        stringstream input;
+        input << line;
+        input >> lower  >> higher >> nqx_m >> nqx_f;
+        death_data dt(lower, higher, nqx_m, nqx_f);
+        data.push_back(dt); 
+    }
+
+    cout << data.size() << "size\n";
     input.close();
 }
 

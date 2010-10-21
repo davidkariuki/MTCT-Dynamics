@@ -19,7 +19,6 @@ using namespace std;
 
 #define DEFAULT_CD4_COUNT 1500.0
 #define DEFAULT_VIRAL_LOAD 0.0 
-#define INITIAL_AGE 15
 #define DEFAULT_VIRUS_TYPE "R5"
 
 class person 
@@ -41,7 +40,7 @@ class person
 		float age, cd4_count, cholesterol;
 		char sex;
 		string risk_group; // IDU, MSM, blood etc
-        float viral_load; // TODO: this has overlap in virus.h also, log
+        float viral_load; // in log copies 
         string virus_type; // TODO: same as viral_load
 		virus hiv; // TODO: is this needed?
         string status;		

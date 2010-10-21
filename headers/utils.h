@@ -12,6 +12,13 @@
 #ifndef __utils_h__
 #define __utils_h__
 
+
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <map>
+#include <iterator>
+#include <math.h>
 #include <list>
 #include <string>
 #include <iomanip>
@@ -20,13 +27,12 @@
 #include "person.h"
 
 using namespace std;
+
 /*-----------------------------------------------------------------------------
  *  #defines 
  *-----------------------------------------------------------------------------*/
 #define EPSILON 0.0001 // TODO: Figure out if rounding check needed
-#define BIRTH_RATE 0.0424 // Malawi DHS 2004 crude yearly birth rate per woman 
-#define TIME_STEP 0.25 // model updates quarterly
-#define BIRTH_PROBABILITY(BIRTH_RATE) (1 - exp((-1) * BIRTH_RATE * TIME_STEP)) // quarterly probability (Fleurence & Hollenbeak 2007)
+#define time_step 0.25 // model updates quarterly
 #define FEMALE_FRACTION 0.5122270149 // from DHS Malawi 2004
 #define MALE_FRACTION (1.0 - FEMALE_FRACTION)
 #define NUM_ARVS_IN_REGIMENT 3
@@ -60,6 +66,23 @@ struct birth_data
 };
 
 
+/*-----------------------------------------------------------------------------
+ *  stores death data
+ *-----------------------------------------------------------------------------*/
+struct death_data 
+{
+    public:
+        explicit death_data(int l, int h, float m, float f)
+        {
+            lower = l; higher = h; nqx_m = m; nqx_f = f; 
+        }
+
+        int lower, higher; // age brackets
+        float nqx_m; // male death probability
+        float nqx_f;
+};
+
+
 
 /* 
  *
@@ -72,44 +95,8 @@ struct birth_data
 bool verify_sex_age(person &p, char sex, float lower, float higher)
 {
     return (p.sex == sex  && p.age >= lower && p.age < higher + 1);
+
 }		
-
-
-
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  evaluate_birth_probability
- *  Description:  calculates the probability of birth, returns true or false
- *                NOTE: infected pregnancy rate reduced by 17% (Desgrees du Lou et al. 1999). 
- * =====================================================================================
- */
-bool evaluate_birth_probability(person &p, list<birth_data> &data, StochasticLib1 &s)
-{
-    list<birth_data>::iterator itr; 
-    for(itr = data.begin(); itr != data.end(); ++itr)
-    {
-        if(verify_sex_age(p, 'F', itr->lower, itr->higher))
-        {
-            if(p.status == "susceptible")
-            {
-                if(s.Binomial(1, BIRTH_PROBABILITY(itr->fraction)))
-                    return true;
-                else
-                    continue;
-            }
-            else // person is infected
-            {
-                if(s.Binomial(1, 0.83 * BIRTH_PROBABILITY(itr->fraction))) // see note 
-                    return true;
-                else
-                    continue;
-            }
-        }
-    }                
-
-    return false;
-}
-
 
 
 /* 
@@ -197,6 +184,18 @@ void inline set_sex(person &p, StochasticLib1 &s)
 }
 
 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  within_age
+ *  Description:  function version of the age checker
+ * =====================================================================================
+ */
+ bool within_age(person& elem, int lower, int higher) 
+ { 
+     return (elem.age >= lower && elem.age <= higher);
+ }
+
+
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -248,25 +247,6 @@ void inline check_bounds(float number, float lower, float higher)
   ; // if(abs(number -lower));;
 }
 
-
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  print_prevalence
- *  Description:  prints prevalence (ages 15 - 49 from DHS Malawi 2004)
- * =====================================================================================
- */
-void print_prevalence(list<person> &susceptible, list<person> &infected)
-{
-    int num_infected = count_if(infected.begin(), infected.end(), within_age_range(15, 49));
-    int num_susceptible = count_if(susceptible.begin(), susceptible.end(), within_age_range(15, 49));
-    cout << "infected 15-49: " << num_infected;
-    cout << "\tsusceptible 15-49: " << num_susceptible;
-    float prevalence = 100.0 * num_infected / (num_susceptible + num_infected); // percentage
-    cout << "\tprevalence: " << prevalence << "%" << endl;
-    
-  //  copy(infected.begin(), infected.end(), ostream_iterator<person> (cout, "\n"));
-
-}
 
 
 /* 

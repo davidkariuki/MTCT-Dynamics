@@ -1,5 +1,0 @@
-F 21 infected
-M 35 infected
-F 39 infected
-M 44 infected
-F 22 susceptible
