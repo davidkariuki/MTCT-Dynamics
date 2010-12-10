@@ -36,17 +36,18 @@ class person
             return cout;
         }
 
+        bool will_get_treatment; // 40% of infected will get treatment
         unsigned int ID, infection_date, clinical_stage;
-		float age, cd4_count, cholesterol;
-		char sex;
+		float age, cd4_count, infection_duration;
+		char sex; // 'M' or 'F'
 		string risk_group; // IDU, MSM, blood etc
         float viral_load; // in log copies 
-        string virus_type; // TODO: same as viral_load
-		virus hiv; // TODO: is this needed?
-        string status;		
+        string status;	// "susceptible" or "infected"
 	private:
 			
 };
+
+
 
 /* DEFAULT CONSTRUCTOR */
 person::person()
@@ -54,6 +55,7 @@ person::person()
     status = "susceptible";
     cd4_count = DEFAULT_CD4_COUNT;
     viral_load = DEFAULT_VIRAL_LOAD;
+    infection_duration = 0.0;
     clinical_stage = 1;
 }
 

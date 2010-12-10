@@ -13,6 +13,8 @@
 #ifndef __deaths_h__
 #define __deaths_h__
 
+
+#define DEATH_CD4 50
 #include "utils.h"
 
 /* 
@@ -23,36 +25,7 @@
  */
 int calc_infected_death_risk(person &p, StochasticLib1 &s)
 {
-    float death_rate, death_probability;
-    death_rate = 0.0146; 
-
-    /*
-    switch(p.clinical_stage)
-    {
-        case 1: case 2: {
-                death_rate = exp(-1.72 - 0.08 * sqrt(p.cd4_count));
-                break;
-            }
-        case 3: {
-                death_rate = exp(-0.895 - 0.079 * sqrt(p.cd4_count));
-                break;
-            }
-        case 4:
-            {
-                death_rate = exp(-0.26 - 0.065 * sqrt(p.cd4_count));
-                break;
-            }
-        default:
-            {
-                cout << "invalid cd4 stage.\n";
-                exit(-3);
-            }
-
-    }
-    */
-
-    death_probability = (1 - exp((-1) * death_rate * .25)); // .25 for quarterly probability
-    return s.Binomial(1, death_probability);
+    return (p.cd4_count <= DEATH_CD4);
 }
 
 
@@ -66,6 +39,14 @@ int calc_infected_death_risk(person &p, StochasticLib1 &s)
  */
 bool calc_susceptible_death_risk(person &p, list<death_data> &data, StochasticLib1 &s)
 {
+    float death_rate = 0.015;
+    float death_prob = 1 - exp((-1) * death_rate * 1.0); // yearly probability
+
+    if(s.Binomial(1, death_prob))
+            return true;
+    else
+        return false;
+
     list<death_data>::iterator itr; 
     for(itr = data.begin(); itr != data.end(); ++itr)
     {
@@ -94,10 +75,10 @@ bool calc_susceptible_death_risk(person &p, list<death_data> &data, StochasticLi
  */
 bool death_risk(person &p, StochasticLib1 &s, list<death_data> &data)
 {
- //   if(p.status == "susceptible")
+    if(p.status == "susceptible")
        return calc_susceptible_death_risk(p, data, s);
-  //  else
-   //    return calc_infected_death_risk(p, s); 
+   else
+       return calc_infected_death_risk(p, s); 
 }
 
 

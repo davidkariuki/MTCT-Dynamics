@@ -25,6 +25,7 @@
 #include "headers/transmission.h"
 #include "headers/deaths.h"
 #include "headers/births.h"
+#include "headers/viral_dynamics.h"
 
 
 /*-----------------------------------------------------------------------------
@@ -33,25 +34,28 @@
 void set_age(CRandomMersenne &, person &, int, int);
 void update_age(list<person> &S, list<person> &I);
 void age_updater(person &p);
+void set_initial_inf_duration(person &p, CRandomMersenne &r);
 void initialize_population(list<person> &,list<person> &, list<prevalence_data> &, StochasticLib1 &, CRandomMersenne &);
 void update_population(list<person> &infected, list<person> &susceptible, StochasticLib1& sto);
 void update_viral_load(person &, StochasticLib1 &);
-void update_cd4_count(person &, StochasticLib1 &);
-void process_virus_type(person &, StochasticLib1 &);
 void population_stats(list<person> &, int &);
 int process_flags(int argc, char* argv[]);
 bool init_infect(person &, prevalence_data &, StochasticLib1 &); 
-int process_flags(int argc, char* argv[]);
-void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s);
+void compute_infected(list<person> &susceptible, list<person> &infected, StochasticLib1 &s, CRandomMersenne &r);
+void shuffle_population(list<person> &population);
+
+
+
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  main
  *  Description:  main is called with number of runs to simulate TODO: other params
+ *
  * =====================================================================================
  */
 int main(int argc, char* argv[])
 {
-	int32_t seed = (int32_t)time(0);
+    int32_t seed = (int32_t)time(0);
 	StochasticLib1 s(seed);
 	CRandomMersenne r((int)seed);
 	process_flags(argc, argv);
@@ -60,18 +64,20 @@ int main(int argc, char* argv[])
     list<prevalence_data> pr_data;	
     list<birth_data> br_data;
     list<death_data> death_data;
+    list<float> birth_rate_data;
     ofstream prev_out("outputs/prevalence.txt", ios::out), out("outputs/population.txt", ios::out);
     //set up data
     import_prevalence_data(pr_data);
-    import_birth_data(br_data);
+    import_birth_rates(birth_rate_data);
     import_death_data(death_data);
 	initialize_population(susceptible, infected, pr_data, s, r);
 
+    float b_rate;
+    list<float>::iterator birthrate_itr = birth_rate_data.begin();
     //print prleminary (day 0) stats
+    //
     cout << "time 0: ";
     print_prevalence(susceptible, infected, prev_out);
-    
-    //cout << "removed: " << removed.size() << endl;
 
     int year = 0;
     // run simulation
@@ -81,18 +87,28 @@ int main(int argc, char* argv[])
 
     for(int i = 0; i < NUM_ITERATIONS; ++i) // 3 month intervals
     {
-        update_births(susceptible, infected, br_data, s);
-        compute_infected(susceptible, infected, s);
-
+        update_births(susceptible, infected, b_rate, s);
+        shuffle_population(susceptible);
+        compute_infected(susceptible, infected, s, r);
+        update_cd4_count(infected, r);
+        update_age(susceptible, infected); // quarterly update
         output_population_statistics(susceptible, infected, removed, out);
         
-
-        if(i  % 4 == 0)
+        //update_cd4_count(
+        if(i % 20 == 0) // every 5 years
         {
+            if(birthrate_itr != birth_rate_data.end())
+            {
+                b_rate = *birthrate_itr;
+                ++birthrate_itr;
+            }
+        }
+
+        if(i  % 4 == 0) // every year
+        {
+            compute_deaths(susceptible, infected, removed, death_data, s); // life tables assume annual
             map<string, int> S, I, R;
             ++year;
-            update_age(susceptible, infected);
-            compute_deaths(susceptible, infected, removed, death_data, s);
             cout << "Year: " << year << "  \t";
             total = susceptible.size() + infected.size();
             float d_p = 100.0 * (total - prev_total) / prev_total;
@@ -105,6 +121,7 @@ int main(int argc, char* argv[])
             print_population_changes(susceptible, infected, removed, S, I, R);
         }
 	}
+
 
     out.close();
     prev_out.close();
@@ -152,6 +169,21 @@ int process_flags(int argc, char* argv[])
 }
 
 
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  shuffle_population
+ *  Description:  simulates random mixing for susceptible population
+ * =====================================================================================
+ */
+void shuffle_population(list<person> & population)
+{
+    vector<person> temp_container(population.begin(), population.end());
+    random_shuffle(temp_container.begin(), temp_container.end());
+    population.assign(temp_container.begin(), temp_container.end());
+}
+
+
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  initialize_population
@@ -165,9 +197,9 @@ void initialize_population(list<person> &susceptible, list<person> &infected, li
     list<prevalence_data>::iterator pd_itr;
 
     // get age data from file & generate numbers of males and females
-    import_population_data(susceptible, r);
+    import_population_data(susceptible, r, s);
 
-    // infect males and females based on prevalence datai
+    // infect males and females based on prevalence data
     bool infctd;
     for(itr = susceptible.begin(); itr != susceptible.end(); )
     {
@@ -178,6 +210,7 @@ void initialize_population(list<person> &susceptible, list<person> &infected, li
            
            if(infctd)
            {
+               set_initial_inf_duration(*itr, r);
                infected.push_back(*itr);
                itr = susceptible.erase(itr); 
                break;
@@ -188,6 +221,20 @@ void initialize_population(list<person> &susceptible, list<person> &infected, li
             ++itr;
 
    }
+}
+
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  set_initial_inf_duration
+ *  Description:  randomizes duration of infection for initial population (years)
+ * =====================================================================================
+ */
+void set_initial_inf_duration(person &p, CRandomMersenne &r)
+{
+    float duration = r.IRandomX(10, 100) / 10.0;
+    p.infection_duration = duration;
 }
 
 
@@ -246,18 +293,18 @@ void update_population(list<person> &infected, list<person> &susceptible, Stocha
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  age_updater
- *  Description:  helper function for update_age
+ *  Description:  helper function for update_age (0.25 for quarterly age updates)
  * =====================================================================================
  */
 void age_updater(person &p)
 {
-    ++(p.age);
+   p.age += 0.25;
 }
 
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  update_age
- *  Description:  updates population ages
+ *  Description:  updates population ages every quarter
  * =====================================================================================
  */
 void update_age(list<person> &S, list<person> &I)
@@ -297,7 +344,7 @@ void update_viral_load(person &p, StochasticLib1 &sto)
 	- vl_prev = virus load at time t-1
 	- cd4_sq_prev = square root of cd4 count at time t-1
 	- delta_cd4_sq = change in square root of cd4 count
-*/
+
 void update_cd4_count(person &p, StochasticLib1 &sto)
 {	
 	float vl_prev = p.viral_load;
@@ -329,27 +376,7 @@ void update_cd4_count(person &p, StochasticLib1 &sto)
 	
 	p.cd4_count = delta_cd4_sq + cd4_sq_prev;
 }
-
-
-
-
-/* PROCESS VIRUS TYPE */ //TODO: mutation type maybe?
-void process_virus_type(person &p, StochasticLib1 &sto) 
-{
-	float v_prev = p.viral_load;
-	float p_x4 = pow(10, v_prev) * 0.0000004; 
-	if(sto.Binomial(1, p_x4 > 1 ? 1 : p_x4)){
-		p.virus_type = "x4";
-	}	
-}
-
-/* DETERMINE RESISTANCE */ // TODO: incomplete
-void determine_resistance(person &p) {
-	int inf_date = p.infection_date;
-	
-	if(inf_date > 1997)
-		;
-}
+*/
 
 
 

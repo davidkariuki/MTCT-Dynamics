@@ -20,8 +20,15 @@
  */
 
 #include "utils.h"
-#define birth_rate 0.0424 // malawi dhs 2004 crude yearly birth rate per woman 
-#define BIRTH_PROBABILITY(birth_rate) (1 - exp((-1) * birth_rate * time_step)) // quarterly probability (fleurence & hollenbeak 2007)
+
+
+
+
+float birth_probability(float birth_rate)
+{
+    return (1 - exp((-1) * birth_rate * 0.25)); // quarterly probability (fleurence & hollenbeak 2007)
+}
+
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -30,29 +37,18 @@
  *                NOTE: infected pregnancy rate reduced by 17% (Desgrees du Lou et al. 1999). 
  * =====================================================================================
  */
-bool evaluate_birth_probability(person &p, list<birth_data> &data, StochasticLib1 &s)
+bool evaluate_birth_probability(person &p, float birth_rate, StochasticLib1 &s)
 {
-    list<birth_data>::iterator itr; 
-    for(itr = data.begin(); itr != data.end(); ++itr)
-    {
-        if(verify_sex_age(p, 'F', itr->lower, itr->higher))
+        if(p.status == "susceptible")
         {
-            if(p.status == "susceptible")
-            {
-                if(s.Binomial(1, BIRTH_PROBABILITY(itr->fraction)))
-                    return true;
-                else
-                    continue;
-            }
-            else // person is infected
-            {
-                if(s.Binomial(1, 0.83 * BIRTH_PROBABILITY(itr->fraction))) // see note 
-                    return true;
-                else
-                    continue;
-            }
+            if(s.Binomial(1, birth_probability(birth_rate)))
+                return true;
         }
-    }                
+        else // person is infected
+        {
+            if(s.Binomial(1, 0.83 * birth_probability(birth_rate))) // see note 
+                return true;
+        }
 
     return false;
 }
@@ -62,20 +58,21 @@ bool evaluate_birth_probability(person &p, list<birth_data> &data, StochasticLib
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  update_births
- *  Description:  adds children based on birth_probability defined in utils.h
+ *  Description:  adds children based on birth_probability defined in  
  *                TODO: implement infecteds MTC
  * =====================================================================================
  */
-void update_births(list<person> &susceptible, list<person> &infected, list<birth_data> &data, StochasticLib1& s)
+void update_births(list<person> &susceptible, list<person> &infected, float birth_rate, StochasticLib1& s)
 {
     list<person>::iterator itr;
 
     for(itr = susceptible.begin(); itr != susceptible.end(); ++itr)
 {
-        if(evaluate_birth_probability(*itr, data, s)) 
+        if(evaluate_birth_probability(*itr, birth_rate, s)) 
         {
            person p;
            set_sex(p, s);
+           if(s.Binomial(1,0.4)) p.will_get_treatment = true; // set treatment prefs
            p.age = 0;
            susceptible.push_front(p); // TODO: ID? Other things to set?
            
@@ -84,10 +81,11 @@ void update_births(list<person> &susceptible, list<person> &infected, list<birth
     
     for(itr = infected.begin(); itr != infected.end(); ++itr)
     {
-        if(evaluate_birth_probability(*itr, data, s)) 
+        if(evaluate_birth_probability(*itr, birth_rate, s)) 
         {
            person p;
            set_sex(p, s);
+           if(s.Binomial(1,0.4))  p.will_get_treatment = true; // set treatment prefs
            p.age = 0;
 
            if(s.Binomial(1, 0.15)) // TODO: source this - Malawi MTCT Rates

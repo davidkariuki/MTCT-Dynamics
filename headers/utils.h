@@ -19,6 +19,7 @@
 #include <map>
 #include <iterator>
 #include <math.h>
+#include <vector>
 #include <list>
 #include <string>
 #include <iomanip>
@@ -81,6 +82,7 @@ struct death_data
         float nqx_m; // male death probability
         float nqx_f;
 };
+
 
 
 
@@ -206,7 +208,7 @@ void inline set_sex(person &p, StochasticLib1 &s)
 struct within_age_range 
 {
 	public: 
-        explicit within_age_range(int l, int h)
+        explicit within_age_range(float l, float h)
         {
             lower = l;
             higher = h;
@@ -219,7 +221,6 @@ struct within_age_range
 
         float lower, higher;
 };
-
 
 
 /* 

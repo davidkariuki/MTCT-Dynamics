@@ -33,7 +33,7 @@ void output_population_statistics(list<person> &S, list<person> &I, list<person>
 {
     static int count = 1;
     if(count == 1)
-        output << "quarter\tsusceptibles\tinfected\tremoved\n";
+        output << "quarter\tS\tI\tR\n";
 
     output << count << "\t" << S.size() <<"\t" << I.size() << "\t" << R.size() << "\n";
      ++count;
@@ -63,31 +63,22 @@ void print_prevalence(list<person> &susceptible, list<person> &infected, ofstrea
 void populate_changes_map(list<person> &L, map<string, int> &M)
 {
     list<person>::iterator itr;
-    
     for(itr = L.begin(); itr != L.end(); ++itr)
     {
-        if(within_age(*itr, 0, 5))          M["0-5"] += 1;
-        else if(within_age(*itr, 6, 10))    M["6-10"] += 1;
-        else if(within_age(*itr, 11, 15))   M["11-15"] += 1;
-        else if(within_age(*itr, 16, 20))   M["16-20"] += 1;
-        else if(within_age(*itr, 21, 25))   M["21-25"] += 1;
-        else if(within_age(*itr, 26, 30))   M["26-30"] += 1;
-        else if(within_age(*itr, 31, 35))   M["31-35"] += 1;
-        else if(within_age(*itr, 36, 40))   M["36-40"] += 1;
-        else if(within_age(*itr, 41, 45))   M["41-45"] += 1;
-        else if(within_age(*itr, 46, 50))   M["46-50"] += 1;
-        else if(within_age(*itr, 51, 55))   M["51-55"] += 1;
-        else if(within_age(*itr, 56, 60))   M["56-60"] += 1;
-        else if(within_age(*itr, 61, 65))   M["61-65"] += 1;
-        else if(within_age(*itr, 66, 70))   M["65-70"] += 1;
-        else if(within_age(*itr, 71, 75))   M["71-75"] += 1;
-        else if(within_age(*itr, 76, 80))   M["76-80"] += 1;
-        else if(within_age(*itr, 81, 85))   M["81-85"] += 1;
-        else if(within_age(*itr, 86, 90))   M["86-90"] += 1;
-        else if(within_age(*itr, 91, 95))   M["91-95"] += 1;
-        else if(within_age(*itr, 96, 100))  M["96-100"] += 1;
-        else if(within_age(*itr, 101, 105)) M["101-105"] += 1;
-        else if(within_age(*itr, 106, 110)) M["106-110"] += 1;
+        int upper = 4, lower = 0; 
+        for(lower = 0; lower < 106; ) {
+            stringstream stream;
+            stream << lower << "-" << upper;
+            string key = stream.str(); 
+            if(within_age(*itr, lower, upper)) 
+            {
+                M[key] += 1;
+                break; // exit inner for loop
+            }
+
+            upper+=5;
+            lower+=5;
+        }
     }
 }
 
@@ -114,6 +105,11 @@ cout << setw(10) << range << ": "
      << setw(10) << I_val 
      << setw(10) << R_val << "\n";
  }
+
+
+
+
+
 void print_population_changes(list<person> &s, list<person> &i, list<person> &r, 
         map<string, int> &S, map<string, int> &I, map<string, int> &R)
 {
@@ -125,30 +121,16 @@ void print_population_changes(list<person> &s, list<person> &i, list<person> &r,
     populate_changes_map(s, S);
     populate_changes_map(i, I);
     populate_changes_map(r, R);
-
+    int lower = 0, upper = 4;
     cout << "========================== Population Changes (S I R) ==========================\n";
-    print_line("0-5", S, I, R, old_S, old_I, old_R);
-    print_line("6-10", S, I, R, old_S, old_I, old_R);
-    print_line("11-15", S, I, R, old_S, old_I, old_R);
-    print_line("16-20", S, I, R, old_S, old_I, old_R);
-    print_line("21-25", S, I, R, old_S, old_I, old_R);
-    print_line("26-30", S, I, R, old_S, old_I, old_R);
-    print_line("31-35", S, I, R, old_S, old_I, old_R);
-    print_line("36-40", S, I, R, old_S, old_I, old_R);
-    print_line("41-45", S, I, R, old_S, old_I, old_R);
-    print_line("46-50", S, I, R, old_S, old_I, old_R);
-    print_line("51-55", S, I, R, old_S, old_I, old_R);
-    print_line("56-60", S, I, R, old_S, old_I, old_R);
-    print_line("61-65", S, I, R, old_S, old_I, old_R);
-    print_line("66-70", S, I, R, old_S, old_I, old_R);
-    print_line("71-75", S, I, R, old_S, old_I, old_R);
-    print_line("76-80", S, I, R, old_S, old_I, old_R);
-    print_line("81-85", S, I, R, old_S, old_I, old_R);
-    print_line("86-90", S, I, R, old_S, old_I, old_R);
-    print_line("91-95", S, I, R, old_S, old_I, old_R);
-    print_line("96-100", S, I, R, old_S, old_I, old_R);
-    print_line("101-105", S, I, R, old_S, old_I, old_R);
-    print_line("106-110", S, I, R, old_S, old_I, old_R);
+    for(lower = 0; lower < 106; ) {
+        stringstream stream;
+        stream << lower << "-" << upper;
+        string key = stream.str(); 
+        print_line(key, S, I, R, old_S, old_I, old_R);
+        lower += 5;
+        upper += 5;
+    }
     cout <<  "==================================================================================\n";
 }
 
